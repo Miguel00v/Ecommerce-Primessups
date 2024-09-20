@@ -1,0 +1,228 @@
+*{
+    box-sizing: border-box;
+  
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Com login */
+  .mainComLogin{
+    padding-top: 5em;
+    width: 90%;
+    display: block;
+    margin: auto;
+    padding-bottom: 7em;
+  }
+  #saudacaoUser{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0C1A21;
+    border-radius: 20px;
+    color:  #FFFFFF;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: 1px solid transparent;
+  }
+  #dadosUser{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #nomeUser{
+    margin-left: 0.5em;
+  }
+  .fa-circle-user{
+    font-size:2em;
+  }
+  .logoutDiv a{
+    color: #FFFFFF;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .logoutDiv .fa-right-from-bracket{
+    font-size: 1.5em;
+    margin-left: 0.2em;
+  }
+  .flexCubos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5em;
+    margin-top: 1em;
+  }
+  
+  #comentario, #suporte {
+    display: flex;
+    width: 100%;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center; 
+    padding: 1em; 
+    height: 10em;
+  }
+  
+  #comentario {
+    background-color: #D9D9D9;
+    border: 1px solid transparent;
+  }
+  
+  #comentario a {
+    text-decoration: none;
+    color: #0C1A21;
+  }
+  
+  #suporte {
+    background-color: #F7CA3A;
+    border: 1px solid transparent;
+  }
+  
+  #suporte a {
+    color: #0C1A21;
+    font-size: 5em;
+    width: 100%;
+    height: 100%;
+  }
+  .flexContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #0C1A21;
+  }
+   /* Fim com login */
+
+   /* Sem login */
+  #inciarSessaoDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0C1A21;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #FFFFFF;
+    height: 4em;
+  }
+  #inciarSessaoDiv a{
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+  #inciarSessaoDiv .fa-right-to-bracket{
+    font-size: 2em;
+  } 
+  .iniciarSessaoBtn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .iniciarSessaoBtn .fa-right-to-bracket{
+    margin-left: 0.2em;
+  }
+  #criarContaDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #0C1A21;
+    margin-top: 1em;
+    height: 4em;
+  }
+  #criarContaDiv a{
+    text-decoration: none;
+    color: #0C1A21;
+  }
+  #criarContaDiv .fa-plus{
+    font-size: 2em;
+    margin-left: 0.2em;
+  }
+  #FAQ,#headset{
+    border-radius: 20px;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center; 
+    padding: 1em; 
+    height: 10em;
+  }
+  #FAQ{
+    background-color: #D9D9D9;
+  }
+  #headset{
+    background-color: #F7CA3A;
+  }
+  #FAQ a,#headset a{
+    width: 100%;
+    font-size: 4em;
+    color: #0C1A21;
+  }
+   /* Fim sem login */
+
+   /* Login administrador */
+   .imagemLogin{
+    height: 4em;
+    border-radius: 20px;
+   }
+   #adminDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0C1A21;
+    border-radius: 20px;
+    color:  #FFFFFF;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: 1px solid transparent;
+   }
+   #saudacaoDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   }
+   #nomeUserAdmin{
+    margin-left: 0.5em;
+   }
+   #comentarioCubo,#heasetCubo,#areaAdmin{
+    border-radius: 20px;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center; 
+    padding: 1em; 
+    height: 10em;
+   }
+   #comentarioCubo a,#heasetCubo a,#areaAdmin a{
+    text-decoration: none;
+    color: #0C1A21;
+   }
+   #heasetCubo a,#areaAdmin a{
+    font-size: 4em;
+   }
+   #comentarioCubo{
+    background-color: #D9D9D9;
+   }
+   #areaAdmin{
+    border: 1px solid #0C1A21;
+   }
+   #heasetCubo{
+    background-color: #F7CA3A;
+   }
+  /* Fim login administrador */

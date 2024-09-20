@@ -1,0 +1,49 @@
+#footerMobile {
+    position: fixed; /* Fixa o footer na janela de visualização */
+    bottom: 0; /* Alinha o footer na parte inferior da página */
+    left: 0; /* Alinha o footer à esquerda */
+    width: 100%; /* Faz com que o footer ocupe toda a largura da página */
+    background-color:#0C1A21; /* Cor de fundo do footer (ajuste conforme necessário) */
+    color: white; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    z-index: 4; /* Valor do z-index para garantir que o footer esteja visível sobre outros elementos */
+
+}
+
+/* Estilo para o container do footer */
+.container-footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Define 5 colunas de igual largura */
+    gap: 10px; /* Espaçamento entre as colunas */
+    justify-items: center; /* Centraliza os itens nas colunas */
+}
+
+/* Estilo para cada coluna */
+.espaco {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+}
+
+/* Estilo para os botões */
+.elementos {
+    background-color: transparent; /* Remove o fundo dos botões */
+    border: none; /* Remove a borda dos botões */
+    padding: 0px; /* Espaçamento interno dos botões */
+    cursor: pointer; /* Muda o cursor para pointer ao passar sobre o botão */
+}
+
+/* Estilo para os ícones e imagens dentro dos botões */
+.elementos i, .elementos img {
+    width: 40px; /* Ajuste o tamanho dos ícones e imagens conforme necessário */
+    height: auto; /* Mantém a proporção das imagens */
+}
+
+/* Estilo para os links dentro do footer */
+.container-footer a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+.fa-bars, .fa-house{
+    color: #F7CA3A;
+    font-size: 33px;
+}

@@ -1,0 +1,206 @@
+*{
+    box-sizing: border-box;
+  
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+/* Avaliação feita pelo cliente estrelas */
+.avaliacao-estrelas {
+    font-size: 16px;
+}
+
+@media(min-width:768px){
+    .avaliacao-estrelas {
+        font-size: 20px;
+    }
+}
+
+.avaliacao-estrelas .fa-star {
+    color: gold; /* Cor das estrelas preenchidas */
+}
+
+.avaliacao-estrelas .fa-star-o {
+    color: #ccc; /* Cor das estrelas vazias */
+}
+
+/* Estilo da imagem do produto sem stock */
+.semStock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Fundo branco transparente */
+    display: none; /* Inicialmente escondido */
+    justify-content: center;
+    align-items: center;
+}
+.semStock img {
+    max-width: 100px; /* Tamanho da cruz */
+    max-height: 100px;
+    opacity: 0.7; /* Opacidade da imagem da cruz */
+}
+
+main{
+    padding-top: 5em;
+    width: 90%;
+    display: block;
+    margin: auto;
+    padding-bottom: 8em;
+}
+
+@media(min-width:768px){
+    main{
+        padding-top: 10em;
+        padding-bottom: 4em;
+    }
+    main #imagemProduto{
+        height: 27em;
+    }
+}
+
+#imagemProduto{
+    width: 60%;
+    height: 14em;
+    display: block;
+    margin: auto;
+}
+
+.flexContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#descricao{
+    width: 100%;
+}
+.btnsQntd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em; /* Espaço entre os botões e o campo de texto */
+}
+.quantidade-btn{
+    border-radius: 50%;
+    border: 1px solid transparent;
+    color:  #FFFFFF;
+    background-color: #0C1A21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em; 
+    height: 2em; 
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quantidade-btn:hover{
+    background-color: #F7CA3A;
+}
+
+.quantidade-btn p {
+    margin: 0; 
+    padding: 0; 
+}
+
+.visualizarQuantidade{
+    border: none;
+    text-align: center;
+    background-color: transparent;
+    color: #0C1A21;
+    width: 20px;
+}
+#btnAdicionarCarrinho{
+    width: 100%;
+    border-radius: 20px;
+    color: #0C1A21;
+    background-color: #F7CA3A;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#btnAdicionarCarrinho:hover{
+    background-color: #0C1A21;
+    color: #F7CA3A;
+}
+.descricaoProduto, .avaliacoesProduto{
+    background-color: #D9D9D9;
+    border-radius:12px;
+    width: 100%;
+    margin-top: 1.5em;
+}
+.descricaoProduto{
+    padding: 1em;
+}
+
+.avaliacoesProduto{
+    padding-bottom: 1em;
+    margin-top: 3em;
+}
+.avaliacoesProduto h2, .avaliacao, .avaliacao-estrelas, .comentario, #nomeUtilizadorAvaliacao{
+    width: 90%;
+    display: block;
+    margin: auto;
+    padding: 1em;
+}
+
+#nomeUtilizadorAvaliacao{
+    text-decoration: underline;
+}
+.avaliacao-estrelas, .comentario{
+    margin-top: -1em;
+}
+.comentario{
+    margin-top: -2em;
+}
+.avaliacao{
+    border: 1px solid #0C1A21;
+    margin-bottom: 1em;
+    border-radius: 12px;
+    width: 80%;
+}
+/* Slideshow */
+.slideshowBanner {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.imagemPd {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.slideshowBanner button {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #FFFFFF;
+    background-color: #0C1A21;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+.slideshowBanner button:hover{
+    background-color: #F7CA3A;
+    color: #0C1A21;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}

@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+  
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  main{
+    padding-top: 7em;
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+  .flexContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #0C1A21;
+    margin-bottom: 1em;
+  }
+  

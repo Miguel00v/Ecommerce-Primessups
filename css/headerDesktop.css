@@ -1,0 +1,706 @@
+#headerDesktop{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    z-index: 4;
+}
+#navDesktop{
+    background-color: #0C1A21;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+.dropdown-content-user.showUser {
+    display: block;
+}
+
+.nav-item-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#results :hover{
+    background-color: #F7CA3A;
+    color: #0C1A21;
+}
+
+#linkImagemLogo{
+    transition: 1s;
+}
+
+#linkImagemLogo:hover{
+    transform: scale(1.5); 
+}
+
+@media(min-width:900px){
+    #pesquisa{
+        width: 70vh;  
+    }
+}
+
+@media(min-width:768px){
+    #imagemLogoDesktop{
+        width: auto; /* Mantém a largura proporcional */
+        max-width: 100%; /* Não excede a largura do contêiner */
+        max-height: 100%; /* Não excede a altura do contêiner */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+    #linkImagemLogo{
+        margin-left: 3%;
+    }
+    #results{
+        position: absolute; /* Usa posicionamento absoluto */
+        top: calc(100%);
+        border-radius: 12px;
+        width: 30%;
+        z-index: 6;
+    }
+      
+      #results a{
+        color: #FFFFFF;
+        text-decoration: none;
+        font-size: 18px;
+        
+      }
+      
+      .resultItem{
+        background-color: #0C1A21;
+        padding: 20px;
+        
+      }
+      #lupaDesktop{
+        font-size: 30px;
+        color: #0C1A21;
+    }
+    
+    .inputPesquisa{
+        padding: 1vh;
+        width: 50vh;
+        font-size: 20px;
+        border-radius: 40px;
+        padding-left: 70px;
+    }
+    
+    .resultsDesktop{
+        background-color: #0C1A21;
+        position: absolute;
+        top: 100%;
+    }
+    
+      
+}
+
+.input-container {
+    position: relative;
+    display: inline-block;
+}
+
+.input-container i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.dropdown-ajuda {
+    position: relative;
+    transition: background-color 0.3s ease;
+    border-radius: 12px;
+}
+.dropdown-ajuda:hover{
+    background-color: #F7CA3A;
+    cursor: pointer;
+    border: 1px solid #F7CA3A;
+}
+
+.dropdown-content-ajuda {
+    display: none;
+    position: absolute;
+    right: 0; /* Ajusta a posição do dropdown */
+    top: 100%; /* Ajusta a posição vertical do dropdown */
+    min-width: 160px;
+    z-index: 3;
+}
+
+.dropdown-content-ajuda input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    outline: none;
+    background-color: #0C1A21;
+    color: #FFFFFF;
+}
+
+.dropdown-content-ajuda input[type="text"]::placeholder {
+    color: #FFFFFF;
+}
+
+.dropbtn_ajuda{
+    background-color: transparent;
+    color: #FFFFFF;
+    font-size:35px ;
+    border-color:transparent ;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-user {
+    position: relative;
+    display: inline-block; /* Permite que o dropdown fique ao lado do botão */
+  }
+
+#dropBtnUser{
+    position: relative;
+    border-radius: 12px;
+    border-color:transparent ;
+    background-color: transparent;
+    color: #FFFFFF;
+    font-size: 35px;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#dropBtnUser:hover{
+    background-color: #F7CA3A;
+    border: 1px solid #F7CA3A;
+}
+
+#myDropdownUser{
+    position: absolute;
+    top: 100%; /
+}
+
+.dropdown-content-user {
+    display: none;
+    right: 0;
+    width: 50vw;
+    z-index: 3;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    outline: none;
+    background-color: #0C1A21;
+    color: #FFFFFF;
+    height: auto;
+    padding: 2em;
+}
+
+
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+    width: 100%;
+    margin: auto;
+    background-color: #0C1A21;
+    padding: 40px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.content a {
+    text-decoration: none;
+    display: flex; /* Flexbox para garantir que o link preencha toda a célula do grid */
+    width: 100%;
+    height: 100%;
+    flex: 1;;
+  }
+  
+.content button {
+    width: 100%;
+    height: 100%;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.content a button{
+    border-radius: 20px;
+}
+
+#content1 a button:hover{
+    background-color: #0C1A21;
+    color: #F7CA3A;
+    border: 2px solid #F7CA3A;
+}
+#content1 a button{
+    background-color: #EF9714;
+}
+#content1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+#content2 a button:hover{
+    background-color: #0C1A21;
+    color: #F7CA3A;
+    border: 2px solid #F7CA3A;
+}
+#content2 a button{
+    background-color: #DF1B1B;
+}
+#content2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+#content3 a button:hover{
+    background-color: #0C1A21;
+    color: #F7CA3A;
+    border: 2px solid #F7CA3A;
+}
+#content3 a button{
+    background-color: #7F00FF;
+}
+#content3 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+#content4 a button:hover{
+    background-color: #0C1A21;
+    color: #F7CA3A;
+    border: 2px solid #F7CA3A;
+}
+#content4 a button{
+    background-color: #0A06C0;
+}
+#content4 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 5;
+}
+
+#content5 a button:hover{
+    background-color: #0C1A21;
+    color: #F7CA3A;
+    border: 2px solid #F7CA3A;
+}
+#content5 a button{
+    background-color: #0D931B;
+}
+#content5 {
+    grid-column: 2 / 5;
+    grid-row: 2 / 3;
+}
+
+#content6 a button:hover{
+    background-color: #0C1A21;
+    color: #F7CA3A;
+    border: 2px solid #F7CA3A;
+}
+#content6 a button{
+    background-color: #00B8D1;
+}
+#content6 {
+    grid-column: 2 / 5;
+    grid-row: 3 / 5;
+}
+
+/* Classe para mostrar o dropdown */
+.showAjuda1 { 
+    display: block; 
+}
+
+@media(max-width:1000px){
+    .content button{
+        padding: 20px;
+    }
+    .grid-content{
+        padding: 30px;
+    }
+}
+
+
+
+.carrinho-btn-desktop{
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .carrinhoDesktop{
+    position: relative;
+    margin-right: 3%;
+    transition: background-color 0.3s ease;
+    border-radius: 12px;
+  }
+
+  .carrinho-btn-desktop:hover{
+    cursor: pointer;
+  }
+  
+  .carrinhoDesktop:hover{
+    background-color: #F7CA3A;
+    border-radius: 12px;
+    cursor: pointer;
+    border: 1px solid #F7CA3A;
+  }
+
+  .cart-count {
+    position: absolute;
+    top: -5px; 
+    right: -5px; 
+    background-color: #F7CA3A; 
+    color: #FFFFFF; 
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    display: none;
+  }
+
+  /* layout user sem login */
+  .content-user-semLogin {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Uma coluna para cada item */
+    gap: 0px; /* Espaço entre os itens */
+    max-width: 100%; /* Garantir que a grid não exceda a largura do container pai */
+    margin-top: 1em;
+}
+
+.itens-user-semLogin {
+    display: flex;
+    flex-direction: row; /* Organiza o conteúdo horizontalmente */
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    justify-content: space-between;
+    border-radius: 20px; /* Bordas arredondadas */
+    width: 100%; /* Ajusta para o tamanho do container da grid */
+    max-width: 100%; /* Tamanho máximo opcional para cada item */
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.itens-user-semLogin a {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF; /* Cor do texto e ícone no link */
+    text-decoration: none;
+    width: 100%;
+}
+
+.iconesHeader {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-right:1em ;
+    gap: 0.5em;
+}
+.iconesHeader .p {
+    margin: 0; /* Remove margem padrão para garantir alinhamento adequado */
+}
+
+#item-user-semLogin1-1,#item-user-semLogin1-2{
+    white-space: nowrap;
+}
+
+.iconesHeader:hover{
+    color: #F7CA3A;
+}
+
+.itens-user-semLogin .fa-solid {
+    font-size: 24px;
+}
+
+#item-user-semLogin1, #item-user-semLogin2 {
+    grid-column: span 1; /* Cada item ocupa uma coluna */
+}
+
+#item-user-semLogin1 {
+    background-color: #43545C;
+    grid-column: 1 / 6;
+    grid-row: 1;
+}
+
+#item-user-semLogin2 {
+    grid-column: 1 / 6;
+    grid-row: 2;
+    background-color: #FFFFFF;
+    color: #0C1A21;
+    margin-top: 2em;
+}
+
+#item-user-semLogin1 a, #item-user-semLogin2 a {
+    color: inherit; /* Garante que a cor do texto do link seja herdada */
+}
+
+#item-user-semLogin1 {
+    background-color: #43545C;
+    grid-column: 1 / 6;
+    grid-row: 1;
+}
+
+#item-user-semLogin2 {
+    grid-column: 1 / 6;
+    grid-row: 2;
+    background-color: #FFFFFF;
+    color: #0C1A21;
+    margin-top: 2em;
+}
+
+#item-user-semLogin1 a, #item-user-semLogin2 a {
+    color: inherit; /* Garante que a cor do texto do link seja herdada */
+}
+
+#item-user-semLogin1 {
+    background-color: #43545C;
+    grid-column: 1 / 6;
+    grid-row: 1;
+}
+
+#item-user-semLogin2 {
+    grid-column: 1 / 6;
+    grid-row: 2;
+    background-color: #FFFFFF;
+    color: #0C1A21;
+    margin-top: 2em;
+}
+
+#item-user-semLogin3 {
+    grid-column: 1 / 6;
+    grid-row: 3;
+    text-align: left;
+}
+
+#item-user-semLogin4, #item-user-semLogin5, #item-user-semLogin6, #item-user-semLogin7 {
+    grid-column: 1 / 6;
+    grid-row: auto;
+    text-align: left;
+}
+
+#item-user-semLogin4 p, #item-user-semLogin5 p, #item-user-semLogin6 p, #item-user-semLogin7 p {
+    display: flex;
+    justify-content: space-between; /* Distribui o conteúdo ao longo do eixo principal */
+    align-items: center; /* Alinha o conteúdo ao longo do eixo transversal */
+    width: 100%; /* Garante que o parágrafo ocupe toda a largura do contêiner */
+    padding: 0 10px; /* Adiciona algum padding para espaçamento */
+}
+.linksHeader:hover{
+    border-bottom: 1px solid #F7CA3A;
+}
+
+#dropBtnUser p{
+    margin: 0;
+}
+
+#imagemPerfil{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.nomeHeaderDesktop .fa-circle-user{
+    font-size: 40px;
+}
+
+#imagemPerfilDrop{
+    height: 6em;
+    border-radius: 12px;
+}
+@media(max-width:945px){
+    #dropBtnUser p {
+    font-size: 15px;
+    white-space: nowrap;
+    }
+}
+  /* layout user com login e administrador */
+  .grid-container-admin-headerDesktop{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-row: auto;
+    gap: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .grid-container-admin-headerDesktop p{
+    margin: 0;
+  }
+
+  .nomeHeaderDesktop{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    gap: 0.5em;
+  }
+
+  .item-Header-desktop1{
+    grid-column: 1/6;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #43545C;
+    border-radius: 12px;
+    padding: 10px;
+  }
+  .item-Header-desktop-admin{
+    grid-column: 1/6;
+    grid-row: auto;
+    margin-top: 1em;
+  }
+  .item-Header-desktop2{
+    grid-column: 1/6;
+    grid-row: auto;
+  }
+  .item-Header-desktop3{
+    grid-row: auto;
+    grid-column: 1/6;
+  }
+  .item-Header-desktop4{
+    grid-row: auto;
+    grid-column: 1/6;
+  }
+
+  .linkLogoutHeaderDesktop{
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  .linkLogoutHeaderDesktop:hover{
+    color: red;
+  }
+
+  .linkHeaderDesktopAdmin .fa-user-tie{
+    font-size: 40px;
+  }
+
+  .linkHeaderDesktopAdmin {
+    display: block; 
+    padding: 2em;  
+    text-decoration: none; 
+    background-color: #FFFFFF; 
+    border-radius: 12px; 
+    color: #0C1A21;
+}
+.linkHeaderDesktopAdmin:hover{
+    background-color: #F7CA3A;
+}
+.linkHeaderDesktopAdmin p {
+    margin: 0; 
+    display: flex; 
+    align-items: center; 
+}
+.linkHeaderDesktopAdmin i {
+    margin-right: 0.5em; 
+}
+.linksHeaderDesktop{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.linksHeaderDesktop{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.linksHeaderDesktop:hover{
+    border-bottom: 1px solid #F7CA3A;
+}
+
+.item-headerDesktop p {
+    margin: 0;
+}
+ #cart-countDesktop{
+    font-size: 17px;
+    top: 0.3em;
+ }
+
+ .categoriasBtnDesktop {
+    position: absolute;
+    top: calc(100%); /* Ajuste 1em para a quantidade de espaçamento desejado abaixo do nav */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.btnCategorias {
+    height: 5em;
+    padding: 0 1em; 
+    min-width: 5em; 
+    text-align: center; 
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    box-sizing: border-box; 
+    background-color: #43545C;
+    color: #FFFFFF;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btnCategorias:hover{
+    background-color: #F7CA3A;
+}
+
+#bordaBtnCategoriaHeader1{
+    border-bottom-left-radius:12px ;
+}
+
+#bordaBtnCategoriaHeader2{
+    border-bottom-right-radius:12px ;
+}
+
+@media (max-width: 1070px) {
+    .btnCategorias {
+        height: 4em; /* Ajusta a altura para telas menores */
+        padding: 0 0.8em; /* Ajusta o padding horizontal */
+        min-width: 4em; /* Diminui a largura mínima para telas menores */
+    }
+}
+
+@media (max-width: 1000px) {
+    .btnCategorias {
+        height: 3em; /* Ajusta a altura para telas menores */
+        padding: 0 0.4em; /* Ajusta o padding horizontal */
+        min-width: 3em; /* Diminui a largura mínima para telas menores */
+    }
+    .btnCategorias p{
+        font-size: 15px;
+    }
+}
+
+.produtosDestaque-headerDesktop{
+   position: absolute;
+   right: 1em;
+   bottom: -2.2em;
+   border: 1px solid  #0C1A21;
+   border-radius: 100%; 
+   padding: 0.5em;
+   background-color: #0C1A21;
+   z-index: 5;
+   transition: background-color 0.3s ease;
+}
+
+.produtosDestaque-headerDesktop:hover{
+    background-color: #FFFFFF;
+}

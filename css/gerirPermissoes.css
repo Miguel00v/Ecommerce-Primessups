@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+  
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  main{
+    padding-top: 4em;
+    width: 90%;
+    display: block;
+    margin: auto;
+  }
+  #newsletter,#email{
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: row;
+  }
+  #btnGuardar{
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background-color:#F7CA3A;
+    color: #0C1A21;
+  }

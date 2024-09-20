@@ -1,0 +1,191 @@
+/* Header */
+#navMobile1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.flexContainerHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#item1FlexHeader {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.backGroundHeader{
+    background-color: #0C1A21;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    height: 3em;
+}
+
+.anteriroUrlHeader i{
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    padding: 12px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+#item1FlexHeader h1 {
+    margin: 0;
+}
+
+#XHeader {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    margin-right: 2em;
+    background-color: #0C1A21;
+    padding: 15px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    height: 2em;
+}
+#XHeader a, .anteriroUrlHeader a{
+    color: #FFFFFF;
+}
+#XHeader:hover, .anteriroUrlHeader i:hover{
+    background-color:#F7CA3A ;
+}
+
+/* Fim header */
+
+#mainCriarconta {
+    padding-top: 7em;
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* Estilização do container de inputs */
+#itemCriarConta1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+#itemCriarConta1 .flexBoxMensagemErro {
+    width: 100%;
+}
+
+/* Estilização dos inputs */
+#formCriarConta .input {
+    border: 1px solid #0C1A21;
+    border-radius: 12px;
+    height: 3em;
+    margin-bottom: 2em;
+    text-align: center;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; /* Transição suave para o foco */
+}
+
+#formCriarConta .input::placeholder {
+    text-align: center;
+}
+
+/* Estilização dos contêineres de senha */
+.password-flex-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1em;
+}
+
+.password-container {
+    position: relative;
+    flex: 1;
+}
+
+/* Estilização dos inputs dentro do contêiner de senha */
+.password-container .input {
+    width: 100%;
+    padding-right: 2.5em; /* Espaço para o ícone */
+    box-sizing: border-box;
+}
+
+/* Ícone de visibilidade da senha */
+.password-container i {
+    position: absolute;
+    right: 10px;
+    top: 33%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1em; /* Ajuste o tamanho do ícone conforme necessário */
+    color: #0C1A21; /* Cor do ícone */
+}
+
+/* Mensagens de erro */
+.erro-mensagem {
+    position: absolute;
+    width: 100%;
+    color: red;
+    margin-top: -1.5em;
+}
+
+
+#flex-TermosCriarconta {
+    width: 100%;
+    display: flex; 
+    justify-content: start;
+    margin-bottom: 1em;
+}
+
+#aceitarTermos {
+    margin: 0; /* Remove margens adicionais */
+    width: 1.2em; 
+    height: 1.2em; 
+    margin-left: 1em;
+}
+
+
+#labelTermos{
+    color: #0C1A21;
+    line-height: 1.2;
+    margin-left: 0.5em;
+}
+
+#labelTermos a{
+    color: inherit;
+}
+
+#alterarBtn{
+    margin: auto;
+    display: block;
+    text-align: center;
+    width: 80%;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    color: #0C1A21;
+    background-color: #F7CA3A;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#alterarBtn:hover{
+    background-color: #0C1A21;
+    color: #FFFFFF;
+}
+
+@media(max-width:613px){
+    #flex-TermosCriarconta{
+        margin-top: 1em;
+    }
+}

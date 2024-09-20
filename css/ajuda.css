@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+  
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+main{
+    padding-top:6em ;
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+.gridBtn{
+    display:grid;
+    grid-template-columns: (5,1fr);
+    grid-template-rows: auto;
+    width: 100%;
+    margin: auto;
+    gap: 1em;
+}
+#btn1{
+    grid-column: 1 / 3;
+    grid-row: 1/3;
+}
+#btn1 a button{
+    background-color: #EF9714;
+}
+#btn2{
+    grid-column: 4 / 6;
+    grid-row: 1/3;
+}
+#btn2 a button{
+    background-color: #DF1B1B;
+}
+#btn3{
+    grid-row: 3/6;
+    grid-column: 1/3;
+}
+#btn3 a button{
+    background-color: #7F00FF;
+}
+#btn4{
+    grid-row: 3/6;
+    grid-column: 4/6;
+}
+#btn4 a button{
+    background-color: #0A06C0;
+}
+#btn5{
+    grid-column: 1/6;
+    grid-row: 6;
+}
+#btn5 a button{
+    background-color: #0D931B;
+}
+#btn1 a button, #btn2 a button, #btn3 a button, #btn4 a button,#btn5 a button, #btn6 a button{
+    width: 100%;
+    height: 9em;
+    border-radius: 20px;
+    color: #FFFFFF;
+    border: none;
+}
+#btn6{
+    grid-column: 1/6;
+    grid-row: 7;
+    width: 100%;
+}
+#btn6 a button{
+    background-color: #00B8D1;
+}

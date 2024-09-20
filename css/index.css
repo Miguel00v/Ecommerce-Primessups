@@ -1,0 +1,425 @@
+/* Slide de banners */
+*{
+  box-sizing: border-box;
+
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+main{
+  padding-top:2em ;
+}
+.slideshowBanner img, .slideshow2 img { 
+  width: 100%; /* Garante que a imagem se ajuste à largura do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.slideshowBanner { 
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  height: 228.23px;
+  perspective: 1000px; /* Adiciona perspectiva para efeito 3D */
+}
+
+.mySlides {
+  display: none; /* Inicia com todos os slides escondidos */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Esconde a face de trás durante a rotação */
+}
+
+.mySlides img {
+  height: 100%; /* Garante que as imagens se ajustem à altura do slideshow */
+  width: auto; /* Mantém a proporção das imagens */
+}
+
+img {
+  vertical-align: middle;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes slide3d {
+  from {transform: rotateY(90deg); opacity: 0;}
+  to {transform: rotateY(0deg); opacity: 1;}
+}
+
+.dotsContainer {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot, .dot2 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #43545C;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot2.active {
+  background-color: #0C1A21;
+}
+
+/* Fim slide banners */
+
+/* Galeria de produtos de destaque  */
+.produtosContainer {
+  display: flex; /* Utiliza flexbox */
+  flex-wrap: wrap; /* Permite quebra de linha se necessário */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 20px; /* Espaçamento entre os itens */
+  padding: 20px;
+}
+
+div.gallery {
+  margin: 5px;
+  border: 2px solid #0C1A21;
+  box-shadow: -2px -2px #0C1A21;
+  border-radius: 20px;
+  width: 13em;
+  overflow: hidden; /* Esconde parte da imagem quando aumenta */
+  position: relative;
+  text-align: center; /* Centraliza o texto dentro da galeria */
+}
+
+div.gallery .image-container {
+  width: 100%;
+  height: 200px; /* Ajusta a altura conforme necessário */
+  overflow: hidden; /* Garante que a imagem maior não ultrapasse o contêiner */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+  object-fit: cover;
+  transform: scale(1.5);
+  z-index:1;
+}
+
+div.gallery:hover img {
+  transform: scale(2.5); /* Aumenta a imagem em 20% */
+}
+
+div.desc, div.preco {
+  padding: 15px;
+  position: relative;
+  z-index: 3;
+  color: #0C1A21;
+}
+
+.produtosContainer a{
+  text-decoration: none;
+}
+
+#tituloProdutosDestaque{
+  text-align: center;
+}
+
+/* Segundo slide */
+.slideshow2{
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  height: 228.23px;
+}
+
+.mySlides2{
+display: none; /* Inicia com todos os slides escondidos */
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden; /* Esconde a face de trás durante a rotação */
+} 
+
+.mySlides2 img {
+height: 100%; /* Garante que as imagens se ajustem à altura do slideshow */
+width: auto; /* Mantém a proporção das imagens */
+}
+
+/* Butões categorias */
+.containerBtns {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 5px; /* Espaçamento entre os itens */
+  width: 100%; /* Largura total do contêiner */
+  box-sizing: border-box; /* Inclui padding e borda nas dimensões totais */
+  margin: auto;
+  margin-bottom: 5em;
+  margin-top: 1em;
+}
+
+.containers {
+  display: flex;
+}
+
+.containers a {
+  text-decoration: none;
+  display: flex; /* Flexbox para garantir que o link preencha toda a célula do grid */
+  width: 100%;
+  height: 100%;
+  flex: 1;;
+}
+
+.containers a button {
+  border: 2px solid;
+  text-align: center; /* Centraliza o texto */
+  display: flex; /* Flexbox para centralizar o conteúdo interno */
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center; /* Alinha horizontalmente */
+  cursor: pointer;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box; /* Garante que padding e borda são incluídos nas dimensões totais */
+  transition: background-color 0.3s ease;
+}
+
+#item1 a button {
+  background-color: #EF9714;
+  color: white;
+}
+
+#item1 a button:hover {
+  background-color: #0C1A21;
+  color: #F7CA3A;
+  border-color: #0C1A21;
+}
+
+#item1 {
+  grid-column: 2/ 4;
+  grid-row: 1;
+}
+
+#item2 a button {
+  background-color: #DF1B1B;
+  color: white;
+}
+
+#item2 a button:hover {
+  background-color: #0C1A21;
+  color: #F7CA3A;
+  border-color: #0C1A21;
+}
+
+#item2 {
+  grid-column: 4 / 7;
+  grid-row: 1 / 3;
+}
+
+#item3 a button {
+  background-color: #7F00FF;
+  color: white;
+}
+
+#item3 a button:hover {
+  background-color: #0C1A21;
+  color: #F7CA3A;
+  border-color: #0C1A21;
+}
+
+#item3 {
+  grid-column: 7 / 12;
+  grid-row: 1;
+}
+
+#item4 a button {
+  background-color: #00B8D1;
+  color: white;
+}
+
+#item4 a button:hover {
+  background-color: #0C1A21;
+  color: #F7CA3A;
+  border-color: #0C1A21;
+}
+
+#item4 {
+  grid-column: 2/ 4;
+  grid-row: 2;
+}
+
+#item5 a button {
+  background-color: #0A06C0;
+  color: white;
+}
+
+#item5 a button:hover {
+  background-color: #0C1A21;
+  color: #F7CA3A;
+  border-color: #0C1A21;
+}
+
+#item5 {
+  grid-column: 7 / 12;
+  grid-row: 2 / 4;
+}
+
+#item6 a button {
+  background-color: #0D931B;
+  color: white;
+}
+
+#item6 a button:hover {
+  background-color: #0C1A21;
+  color: #F7CA3A;
+  border-color: #0C1A21;
+}
+
+#item6 {
+  grid-column: 2 / 7;
+  grid-row: 3;
+}
+/* Responsividade */
+@media (min-width: 768px) {
+  .slideshowBanner, .slideshow2 {
+    height: 400px;
+  }
+  main{
+    padding-top: 5em;
+  }
+}
+@media (min-width:1000px){
+  .slideshowBanner, .slideshow2 {
+    height: 700px;
+  }
+  div.gallery {
+    width: 18em; /* Aumenta a largura do contêiner da galeria */
+  }
+  div.gallery .image-container {
+    height: 200px; /* Aumenta a altura da imagem */
+  }
+  #item1 {
+    grid-column: 2/ 4;
+    grid-row: 1/9;
+  }
+  
+  #item2 {
+    grid-column: 4 / 7;
+    grid-row: 1 / 9;
+  }
+  
+  #item3 {
+    grid-column: 7 / 12;
+    grid-row: 1/5;
+  }
+  
+  #item4 {
+    grid-column: 2/ 6;
+    grid-row: 9/12;
+  }
+  
+  #item5 {
+    grid-column: 7 / 12;
+    grid-row: 5 / 9;
+  }
+  
+  #item6 {
+    grid-column: 6 / 12;
+    grid-row: 9/12;
+  }
+}
+
+
+
+@media (max-width: 624px) {
+  
+  #item1 {
+    grid-column: 2/ 4;
+    grid-row: 1/5;
+  }
+  
+  #item2 {
+    grid-column: 4 / 7;
+    grid-row: 1 / 5;
+  }
+  
+  #item3 {
+    grid-column: 7 / 12;
+    grid-row: 1;
+  }
+  
+  #item4 {
+    grid-column: 2/ 6;
+    grid-row: 6;
+  }
+  
+  #item5 {
+    grid-column: 7 / 12;
+    grid-row: 2 / 5;
+  }
+  
+  #item6 {
+    grid-column: 6 / 12;
+    grid-row: 6;
+  }
+
+}
+
+
+@media (max-width: 494px) {
+  
+  .containerBtns{
+    gap: 2px;
+  }
+  .containers h3 {
+    font-size: 13px;
+  }
+}
+
+@media(max-width:400px){
+  .containerBtns{
+    gap: 0;
+  }
+
+  #item1 {
+    grid-column: 2/ 5;
+    grid-row: 1/5;
+  }
+  
+  #item2 {
+    grid-column: 5 / 9;
+    grid-row: 1 / 5;
+  }
+  
+  #item3 {
+    grid-column:9 / 12;
+    grid-row: 1;
+  }
+  
+  #item4 {
+    grid-column: 2/ 6;
+    grid-row: 6;
+  }
+  
+  #item5 {
+    grid-column:9 / 12;
+    grid-row: 2 / 5;
+  }
+  
+  #item6 {
+    grid-column: 6 / 12;
+    grid-row: 6;
+  }
+}

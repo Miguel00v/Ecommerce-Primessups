@@ -1,0 +1,184 @@
+/* Estilos gerais do nav */
+nav {
+  position: fixed; 
+  top: 0; 
+  width: 100%;
+  padding: 10px; 
+  z-index: 4; 
+  display: flex;
+  justify-content: space-between; /* Espaça os itens igualmente */
+  align-items: center; /* Alinha verticalmente os itens */
+}
+
+/* Estilo para os itens dentro do nav */
+.nav-items {
+  display: flex;
+  align-items: center; /* Alinha verticalmente os itens */
+  gap: 10px; /* Espaçamento entre os itens */
+}
+
+/* Estilo para os botões de dropdown e carrinho */
+.dropbtn_lupa, .carrinho {
+  background-color: #0C1A21;
+  color: #FFFFFF;
+  width:50px;
+  height: 50px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.carrinho-btn{
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+/* Hover e focus para os botões */
+.dropbtn_lupa:hover, .dropbtn_lupa:focus {
+  background-color: #FFFFFF;
+  color: #0C1A21;
+  border: 2px solid #0C1A21;
+}
+
+/* Estilo para o dropdown */
+.dropdown_lupa {
+  position: relative;
+}
+
+.dropdown-contentLupa {
+  display: none;
+  position: absolute;
+  right: 0; /* Ajusta a posição do dropdown */
+  top:0; /* Ajusta a posição vertical do dropdown */
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-contentLupa input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  position: relative;
+  border: 2px #0C1A21;
+  top: -0.8em;
+  border-radius: 12px;
+  outline: none;
+  background-color: #0C1A21;
+  color: #FFFFFF;
+}
+
+.dropdown-contentLupa input[type="text"]::placeholder {
+  color: #FFFFFF;
+}
+
+/* Classe para mostrar o dropdown */
+.show { display: block; }
+
+/* Estilo para o logo */
+.imagemLogo {
+  max-width: 300px; /* Garante que o logo não ultrapasse o tamanho máximo */
+  height: auto; /* Mantém a proporção da altura */
+  border-radius: 15px;
+  margin-right:10px ;
+}
+
+#results{
+  position: relative;
+  top: -0.7em;
+  border-radius: 12px;
+  text-align: center;
+}
+
+#results a{
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 12px;
+}
+
+.resultItem{
+  background-color: #0C1A21;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .nav-items {
+    gap: 10px; /* Reduz o espaçamento entre os itens em telas menores */
+  }
+
+  .dropdown-contentLupa {
+    right: 0;
+    top: 60px; /* Ajusta a posição do dropdown em telas menores */
+    min-width: 140px; /* Reduz a largura mínima do dropdown */
+  }
+
+  .imagemLogo {
+    max-width: 260px; /* Reduz o tamanho máximo do logo em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    flex-direction: row; /* Coloca todos os itens em uma coluna em telas muito pequenas */
+    align-items: center; /* Centraliza os itens horizontalmente */
+  }
+
+  .nav-items {
+    flex-direction: row; /* Organiza os itens em uma coluna */
+    gap: 10px; /* Adiciona espaço entre os itens */
+  }
+
+}
+
+@media (max-width: 410px) {
+  nav {
+    flex-direction: row; /* Coloca todos os itens em uma coluna em telas muito pequenas */
+    align-items: center; /* Centraliza os itens horizontalmente */
+  }
+
+  .dropdown-contentLupa input[type="text"] {
+    position: relative;
+    top: -1.6em;
+  }
+
+  #results{
+    margin-top: -0.7em;
+  }
+  .nav-items {
+    flex-direction: row; /* Organiza os itens em uma coluna */
+    gap: 10px; /* Adiciona espaço entre os itens */
+  }
+
+  .imagemLogo {
+    max-width: 200px; /* Reduz o tamanho máximo do logo em telas menores */
+  }
+
+  .dropbtn_lupa, .carrinho {
+    width:40px;
+    height:40px;
+  }
+
+}
+
+.carrinho{
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px; 
+  right: -5px; 
+  background-color: #F7CA3A; 
+  color: #FFFFFF; 
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 0.8em;
+  font-weight: bold;
+  display: none;
+}

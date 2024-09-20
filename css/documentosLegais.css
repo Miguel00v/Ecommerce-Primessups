@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .documento{
+    width: 80%;
+    padding-top: 4em;
+    color: #0C1A21;
+    display: block;
+    margin: auto;
+    height: auto;
+    padding-bottom:7em ;
+  }
+
+  @media(width >= 769px){
+    .documento{
+        padding-top: 10em;
+        padding-bottom: 2em;
+    }
+  }

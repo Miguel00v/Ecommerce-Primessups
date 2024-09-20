@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+  
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  main{
+    padding-top: 4em;
+    width: 90%;
+    display: block;
+    margin: auto;
+  }
+  #btnDesativar{
+    display: block;
+    width: 100%;
+    background-color: #F7CA3A;
+    color: #0C1A21;
+    border: 1px solid transparent;
+    border-radius: 20px;
+  }

@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+  
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  main{
+    padding-top: 4em;
+    width: 90%;
+    display: block;
+    margin: auto;
+    padding-bottom: 7em;
+  }
+
+.background{
+    border: 1px solid green;
+    border-radius: 12px;
+}
+.titulo{
+    text-align: center;
+}
+.imagemConfirmacao{
+    margin-bottom: 1em;
+}
+.imagemII{
+    border-radius: 12px;
+}
+.container{
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+.divProdutos{
+    background-color: #0C1A21;
+    color: #FFFFFF;
+    padding: 1em;
+    border-radius: 20px;
+    height: 12em;
+    position: relative;
+    margin-bottom: 1em;
+}
+.imagemProduto{
+    position: absolute;
+    width: 40%;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+.nomeProduto{
+    position: absolute;
+    left: 42%;
+    top: 2%;
+}
+.quantidadeProduto{
+    position: absolute;
+    left: 42%;
+    bottom: 5%;
+}
+.preco{
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+.backgroundResumo{
+    border-radius: 20px;
+    border: 1px solid #0C1A21;
+    padding: 1em;
+    margin-top: 1em;
+    color: #0C1A21;
+}
+.flexResumo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.flexboxEmail{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+}
+.flexboxEmail i{
+    font-size: 2em;
+}
+
+@media(min-width:768px){
+    main{
+        padding-top: 12em;
+    }
+    .imagemII {
+        width: 100%;      
+        height: auto;    
+    }
+    .divProdutos{
+        height: 20em;
+    }
+  }

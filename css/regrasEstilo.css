@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('/Desenvolvimento/fonts/Lato-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/Desenvolvimento/fonts/Lato-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('/Desenvolvimento/fonts/Lato-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+*{
+    font-family: 'lato',sans-serif;
+}
+
+h1{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+p, ::placeholder{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.p{
+    font-size: 13px;
+    font-weight: 300;
+}
+
+:root{
+    --amarelo:#F7CA3A; /*cor principal*/
+    --azulEscuro:#0C1A21; /*cor principal*/
+    --branco:#FFFFFF; /*cor principal*/
+    --cinzaClaro:#D9D9D9; /*cor secundária*/
+    --azulClaro:#43545C; /*cor secundária*/
+}
+
+
+/* Tamanho de fonte para desktop */
+@media (min-width:768px){
+
+    h1{
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    h2{
+        font-size: 24px;
+        font-weight: 400;
+    }
+    h3{
+        font-size: 20px;
+        font-weight: 400;
+    }
+    p, ::placeholder{
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .p{
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+}
+

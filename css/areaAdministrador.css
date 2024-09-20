@@ -1,0 +1,203 @@
+*{
+    box-sizing: border-box;
+  
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  main{
+    padding-top: 5em;
+    width: 90%;
+    display: block;
+    margin: auto;
+  }
+  .mainDesktop{
+    display: none;
+  }
+  .flexAdmin{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #0C1A21;
+    text-decoration: none;
+  }
+  @media(min-width:768px){
+    main{
+      padding-top: 12em;
+      width: 100%;
+    }
+    .mainMobile{
+      display: none;
+    }
+    .mainDesktop{
+      display: block;
+    }
+    #tituloAdminDesktop{
+      display: block;
+      margin: auto;
+      background-color: #0C1A21;
+      color: #FFFFFF;
+      padding: 1em;
+      border-radius: 12px;
+      margin-bottom: 2em;
+      width: 50%;
+      text-align: center;
+    }
+    .background {
+      background-color: #D9D9D9;
+      display: flex;
+      flex-direction: row;
+      color: #FFFFFF;
+      justify-content: space-between;
+      width: 100%;
+      gap: 1em;
+  }
+  
+  .divs {
+      flex: 1; /* Faz com que todas as divs ocupem o mesmo espaço disponível */
+      height: 100px; /* Ajuste a altura conforme necessário */
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
+  }
+  
+  .divs:hover {
+      background-color: #0C1A21;
+      border: 2px solid #F7CA3A;
+  }
+  
+  .linksAdmin {
+      text-decoration: none;
+      text-align: center;
+      color: #0C1A21;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center; /* Centraliza o texto verticalmente */
+      justify-content: center; /* Centraliza o texto horizontalmente */
+
+  }
+  
+  .linksAdmin:hover {
+      color: #FFFFFF;
+  }
+  #encomendasDesktop{
+    background-color: #0C1A21;
+    border: 2px solid #F7CA3A;
+  }
+  #encomendasDesktop .linksAdmin{
+    color: #FFFFFF;
+  }
+  .divSearch{
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 2em;
+  }
+  #tituloSearch{
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-bottom: 1em;
+  }
+  #flexInputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+    gap: 1em;
+  }
+  .inputs{
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  #flexBtnsPesquisa{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 60%;
+    margin: auto;
+  }
+  .btnsPesquisa{
+    width: 100%;
+    border: 1px solid transparent;
+  }
+  #filtrar:enabled{
+    background-color: #F7CA3A;
+    color: #0C1A21;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  #filtrar:enabled:hover{
+    background-color: #0C1A21;
+    color: #F7CA3A;
+  }
+  #limpar{
+    background-color: #0C1A21;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  #limpar:hover{
+    background-color: #F7CA3A;
+  }
+  #encomendasPadrao{
+    background-color: #0C1A21;
+    padding: 1em;  
+    display: flex;
+    flex-direction: column;
+    height: 50em;
+    overflow-y: auto;
+    width: 70%;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  .encomendas .linkBtnEncomenda{
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  .encomendas{
+    width: 90%;
+    display: block;
+    margin: auto;
+    box-shadow:2px 2px 0px 0px #FFFFFF;
+    border-bottom-right-radius:12px ;
+  }
+  .linkBtnEncomenda:hover, .encomendas:hover{
+    box-shadow:2px 2px 0px 0px #F7CA3A;
+    color: #F7CA3A;
+  }
+  .numeroEncomenda{
+    color: #F7CA3A;
+  }
+  .encomendasBack{
+    background-color: #0C1A21;
+    width: 70%;
+    padding: 1em;
+    overflow-y: auto;
+    margin: auto;
+    color: #FFFFFF;
+  }
+  .semEncomendas{
+    background-color: #0C1A21;
+    width: 70%;
+    color: #FFFFFF;
+    margin: auto;
+    padding: 1em;
+  }
+  .result{
+    margin-top: 2em;
+    margin-bottom: 3em;
+  }
+  }

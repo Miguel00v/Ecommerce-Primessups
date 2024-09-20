@@ -1,0 +1,150 @@
+*{
+    box-sizing: border-box; 
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  main{
+    padding-top: 5em;
+    width: 90%;
+    display: block;
+    margin: auto;
+  } 
+  #titulo1{
+    background-color: #0C1A21;
+    color: #FFFFFF;
+    padding: 12px;
+    border-radius:12px ;
+    text-align: center;
+  }
+  #tituloAdminDesktop, .background{
+    display: none;
+  }
+  #nomeDocumento{
+    padding: 12px;
+    border: 1px solid #0C1A21;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 1em;
+  }
+  .aligntTitle{
+    text-align: center;
+  }
+  #formConteudo{
+    background-color: #0C1A21;
+    padding-top: 0.5em;
+    padding: 1em;
+    border: 1px solid transparent;
+    border-radius: 10px;
+  }
+  .inputs{
+    width: 100%;
+    margin-bottom: 1em;
+    background-color: #0C1A21;
+    color: #FFFFFF;
+    border: none;
+    font-size: 18px;
+  }
+  .textArea{
+    width: 100%;  
+    overflow-y: scroll; 
+    resize: none; 
+    height: 20em;
+    font-size: 15px;
+    padding: 1em;
+    border-radius: 10px;
+  }
+  #btnGuardar{
+    width: 100%;
+    border: 1px solid transparent;
+    background-color: #F7CA3A;
+    color: #0C1A21;
+    margin-top: 1em;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  #btnGuardar:hover{
+    background-color: #0C1A21;
+    color: #F7CA3A;
+    border: 1px solid #F7CA3A;
+  }
+  @media(min-width:768px){
+    main{
+      padding-top: 12em;
+      margin-bottom: 3em;
+      width: 100%;
+    }
+    #titulo1, #posicaoDesktop{
+      width: 90%;
+      display: block;
+      margin: auto;
+    }
+    #titulo1{
+      margin-bottom: 1em;
+    }
+    #tituloAdminDesktop{
+      display: block;
+      margin: auto;
+      background-color: #0C1A21;
+      color: #FFFFFF;
+      padding: 1em;
+      border-radius: 12px;
+      margin-bottom: 2em;
+      width: 50%;
+      text-align: center;
+    }
+    .background {
+      background-color: #D9D9D9;
+      display: flex;
+      flex-direction: row;
+      color: #FFFFFF;
+      justify-content: space-between;
+      width: 100%;
+      gap: 1em;
+      margin-bottom: 3em;
+  }
+  .divs {
+      flex: 1; /* Faz com que todas as divs ocupem o mesmo espaço disponível */
+      height: 100px; /* Ajuste a altura conforme necessário */
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
+  }
+  .divs:hover {
+      background-color: #0C1A21;
+      border: 2px solid #F7CA3A;
+  }
+  .linksAdmin {
+      text-decoration: none;
+      text-align: center;
+      color: #0C1A21;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center; /* Centraliza o texto verticalmente */
+      justify-content: center; /* Centraliza o texto horizontalmente */
+
+  }
+  .linksAdmin:hover {
+      color: #FFFFFF;
+  }
+  #documentosLegaisDesktop{
+    background-color: #0C1A21;
+  }
+  #documentosLegaisDesktop .linksAdmin{
+    color: #FFFFFF;
+    border: 2px solid #F7CA3A;
+  }
+  .textArea{
+    width: 100%;  
+    resize: none; 
+    height: 40em;
+    font-size: 15px;
+    padding: 1em;
+    border-radius: 10px;
+  }
+  }

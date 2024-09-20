@@ -1,0 +1,106 @@
+*{
+  box-sizing: border-box;
+
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  padding-top: 10em;
+}
+
+@media(max-width:768px){
+  main{
+    padding-top: 4em;
+  }
+}
+
+/* Estilo básico da galeria */
+div.gallery {
+  margin: 5px;
+  border: 2px solid #0C1A21;
+  box-shadow: -2px -2px #0C1A21;
+  border-radius: 20px;
+  width: 13em;
+  overflow: hidden; /* Esconde parte da imagem quando aumenta */
+  position: relative;
+  text-align: center; /* Centraliza o texto dentro da galeria */
+}
+
+div.gallery:hover {
+  border: 2px solid #777; /* Muda a cor da borda ao passar o mouse */
+}
+
+div.gallery .image-container {
+  width: 100%;
+  height: 180px; /* Ajusta a altura conforme necessário */
+  overflow: hidden; /* Garante que a imagem maior não ultrapasse o contêiner */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+  object-fit: cover;
+  transform: scale(1.5); /* Reduz a imagem inicialmente */
+  z-index: 1;
+}
+
+div.gallery:hover img {
+  transform: scale(2.5); /* Aumenta a imagem ao passar o mouse */
+}
+
+div.desc, div.preco {
+  padding: 15px;
+  position: relative;
+  z-index: 3;
+  color: #0C1A21;
+}
+
+.produtosContainer {
+  display: flex; /* Utiliza flexbox */
+  flex-wrap: wrap; /* Permite quebra de linha se necessário */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 20px; /* Espaçamento entre os itens */
+  padding: 20px;
+  width: 90%;
+  margin: auto;
+}
+
+.produtosContainer a {
+  text-decoration: none; /* Remove sublinhado dos links */
+}
+
+#tituloProdutosDestaque {
+  text-align: center; /* Centraliza o título */
+}
+@media(min-width:768px){
+  div.gallery {
+    width: 15em; /* Aumenta a largura do contêiner da galeria */
+  }
+}
+
+@media(min-width:1000px){
+  div.gallery {
+    width: 18em; /* Aumenta a largura do contêiner da galeria */
+  }
+  div.gallery .image-container {
+    height: 200px; /* Aumenta a altura da imagem */
+  }
+}
+.backgroundCategorias{
+  background-color: #0C1A21;
+  border-radius: 20px;
+  width: 80%;
+  display: block;
+  margin: auto;
+  text-align: center;
+  color:#FFFFFF ;
+  margin-top: 2em;
+  padding: 0.01em;
+}

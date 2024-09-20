@@ -1,0 +1,20 @@
+#imagemLogo{
+    width:100%;
+    display: block;
+    margin: auto;
+    height: 15em;
+    margin-bottom: -3em;
+}
+
+@media(width>=769px ){
+
+    #imagemLogo{
+        height: 40em;
+        margin-bottom: -10em;
+    }
+
+}
+
+.documento{
+    padding-top: 0em;
+}

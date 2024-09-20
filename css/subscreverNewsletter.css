@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+  
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  main{
+    padding-top: 6em;
+  }
+  #titulo1{
+    background-color: #0C1A21;
+    color: #FFFFFF;
+    padding: 12px;
+    text-align: center;
+    width: 90%;
+    display: block;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    margin: auto;
+    margin-bottom: 2em;
+  }
+  #formSubNews input{
+    width: 80%;
+    display: block;
+    margin: auto;
+    border-radius: 12px;
+    border: 1px solid #0C1A21;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+  #formSubNews button{
+    width: 80%;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+    background-color: #F7CA3A;
+    color: #0C1A21;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  #formSubNews button:hover{
+    background-color: #0C1A21;
+    color: #F7CA3A;
+  }
+ @media(min-width:768px){
+  main{
+    padding-top: 12em;
+  }
+  #titulo1{
+    width: 60%;
+  }
+  footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+ }

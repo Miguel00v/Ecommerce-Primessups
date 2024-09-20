@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+  
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  main{
+    padding-top: 5em;
+    width: 90%;
+    display: block;
+    margin: auto;
+  }
+  .background1{
+    display: none;
+  }
+  .background2{
+    background-color: #0C1A21;
+    text-align: center;
+    border-radius: 8px;
+    color: #FFFFFF;
+    padding: 1px;
+    margin-bottom: 2em;
+  }
+  .background{
+    background-color: #0C1A21;
+    border-radius: 8px;
+  }
+  .inputs{
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .background form{
+    width: 90%;
+    display: block;
+    margin: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .flexPredefinido{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1em;
+    align-items: center;
+    color: #FFFFFF;
+  }
+  .flexPredefinido input{
+    height: 2em;
+    width: 2em;
+  }
+  .btnAdicionar{
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    color: #0C1A21;
+    background-color: #F7CA3A;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .btnAdicionar:hover{
+    background-color: #0C1A21;
+    color: #F7CA3A;
+  }
+  @media(min-width:768px){
+    main{
+      padding-top: 12em;
+      width: 100%;
+    }
+    .background2{
+      width: 60%;
+      display: block;
+      margin: auto;
+      margin-bottom: 1em;
+    }
+    .background1 {
+      background-color: #D9D9D9;
+      display: flex;
+      flex-direction: row;
+      color: #FFFFFF;
+      justify-content: space-between;
+      width: 100%;
+      gap: 1em;
+      margin-bottom: 3em;
+  }
+  .divs {
+      flex: 1; /* Faz com que todas as divs ocupem o mesmo espaço disponível */
+      height: 100px; /* Ajuste a altura conforme necessário */
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s;
+  }
+  .divs:hover {
+      background-color: #0C1A21;
+      border: 2px solid #F7CA3A;
+  }
+  .linksAdmin {
+      text-decoration: none;
+      text-align: center;
+      color: #0C1A21;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center; /* Centraliza o texto verticalmente */
+      justify-content: center; /* Centraliza o texto horizontalmente */
+  
+  }
+  .linksAdmin:hover {
+      color: #FFFFFF;
+  }
+  #enderecosUser{
+    background-color: #0C1A21;
+  }
+  #enderecosUser .linksAdmin{
+    color: #FFFFFF;
+    border: 2px solid #F7CA3A;
+  }
+  .background{
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-bottom: 3em;
+  }
+  }

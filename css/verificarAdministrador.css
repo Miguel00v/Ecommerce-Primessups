@@ -1,0 +1,126 @@
+/* Header */
+#navMobile1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.flexContainerHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#item1FlexHeader {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.backGroundHeader{
+    background-color: #0C1A21;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    height: 3em;
+}
+
+.anteriroUrlHeader i{
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    padding: 12px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+#item1FlexHeader h1 {
+    margin: 0;
+}
+
+#XHeader {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    margin-right: 2em;
+    background-color: #0C1A21;
+    padding: 15px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    height: 2em;
+}
+#XHeader a, .anteriroUrlHeader a{
+    color: #FFFFFF;
+}
+#XHeader:hover, .anteriroUrlHeader i:hover{
+    background-color:#F7CA3A ;
+}
+
+/* Fim header */
+main{
+    padding-top: 6em;
+}
+input{
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-bottom: 1em;
+    border-radius: 20px;
+    border: 1px solid #0C1A21;
+    padding: 1em;
+}
+.btn{
+    display: block;
+    margin: auto;
+}
+#btnReset{
+    width: 80%;
+    border-radius: 20px;
+    padding: 0.001em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #0C1A21;
+    color: #FFFFFF;
+    border: none;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+#btnReset:hover{
+    background-color: #F7CA3A;
+    color: #0C1A21;
+}
+#btnSubmit{
+    width: 90%;
+    border-radius: 20px;
+    border: 1px solid #F7CA3A;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #F7CA3A;
+    padding: 0.2em;
+    color: #0C1A21;
+}
+#btnSubmit:hover{
+    background-color: #0C1A21;
+    color: #F7CA3A;
+}
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.password-container input {
+    padding-right: 1px; /* Espaco para o ícone */
+}
+.password-container i {
+    position: absolute;
+    right: 10%;
+    cursor: pointer;
+    top: calc(25.5%);
+}

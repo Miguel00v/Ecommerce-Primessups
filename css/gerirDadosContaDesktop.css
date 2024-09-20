@@ -1,0 +1,184 @@
+*{
+    box-sizing: border-box;
+  
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  main{
+    padding-top: 12em;
+  }
+  .background {
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1em;
+    margin-bottom: 3em;
+    position: relative;
+}
+.divs {
+    flex: 1; /* Faz com que todas as divs ocupem o mesmo espaço disponível */
+    height: 100px; /* Ajuste a altura conforme necessário */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+.divs:hover {
+    background-color: #0C1A21;
+    border: 2px solid #F7CA3A;
+}
+.linksAdmin {
+    text-decoration: none;
+    text-align: center;
+    color: #0C1A21;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; /* Centraliza o texto verticalmente */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+
+}
+.linksAdmin:hover {
+    color: #FFFFFF;
+}
+#dadosUser{
+    background-color: #0C1A21;
+}
+#dadosUser .linksAdmin{
+    color: #FFFFFF;
+    border: 2px solid #F7CA3A;
+  }
+  .background1{
+    background-color: #0C1A21;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(11,1fr);
+    margin: auto;
+    padding: 2em;
+    margin-bottom: 3em;
+  }
+  .flexBtns{
+    grid-column: 1/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  .dropbtn{
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #0C1A21;
+    color: #FFFFFF;
+    height: 10em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .dropbtn:hover{
+    background-color: #F7CA3A;
+    color: #0C1A21;
+  }
+  .dropbtn i{
+    font-size: 2em
+  }
+  .posicaoForms{
+  grid-column: 5/12;
+  background-color:#43545C;
+  display: none;
+  color: #FFFFFF;
+  }
+  .show{
+    display: block;
+  }
+  #setaDireita{
+    display: none;
+  }
+  .posicaoForms form{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .posicaoForms h2{
+    text-align: center;
+  }
+  #btnDesativar, #btnAlterarDadosPessoais:enabled, #btnAtualizarFotoPerfil:enabled,#btnAlterarPermissoes{
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    color: #F7CA3A;
+    background-color: #0C1A21;
+  }
+  #btnDesativar:hover , #btnAlterarDadosPessoais:enabled:hover, #btnAtualizarFotoPerfil:enabled:hover, #btnAlterarPermissoes:hover{
+    background-color: #F7CA3A;
+    color: #0C1A21;
+  }
+  #btnAlterarDadosPessoais, #btnAtualizarFotoPerfil{
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 20px;
+  }
+  .erro{
+    color:  red;
+  }
+  .flexInputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  .inputs{
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .inputGroup{
+    width: 100%;
+  }
+#imagemPerfilAtual{
+  width:20em;
+  height: 20em;
+}
+#previewImagem{
+  display: none;
+  width: 20em;
+  height: 20em;
+}
+.previewImagem{
+  display: none;
+}
+#btnAtualizarFotoPerfil{
+  margin-top: 1em;
+}
+#newsletter, #emails{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+#btnAlterarPermissoes{
+  margin-top: 1em;
+}
+.flexImage{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.divImagens, .previewImagem{
+  width: 100%;
+}
+#fotoPerfilDados{
+  margin-top: 1em;
+  font-size: 18px;
+}
+.active {
+  background-color: #43545C; /* Cor do botão quando está ativo */
+}

@@ -1,0 +1,235 @@
+*{
+    box-sizing: border-box;
+  
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+main{
+    padding-top: 12em;
+}
+#tituloAdminDesktop{
+    display: block;
+    margin: auto;
+    background-color: #0C1A21;
+    color: #FFFFFF;
+    padding: 1em;
+    border-radius: 12px;
+    margin-bottom: 2em;
+    width: 50%;
+    text-align: center;
+  }
+  .background {
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: row;
+    color: #FFFFFF;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1em;
+}
+
+.divs {
+    flex: 1; /* Faz com que todas as divs ocupem o mesmo espaço disponível */
+    height: 100px; /* Ajuste a altura conforme necessário */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.divs:hover {
+    background-color: #0C1A21;
+    border: 2px solid #F7CA3A;
+}
+
+.linksAdmin {
+    text-decoration: none;
+    text-align: center;
+    color: #0C1A21;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; /* Centraliza o texto verticalmente */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+
+}
+.linksAdmin:hover {
+    color: #FFFFFF;
+}
+#utilizaodresDesktop{
+    background-color: #0C1A21;
+}
+#utilizaodresDesktop .linksAdmin{
+    color: #FFFFFF;
+    border: 2px solid #F7CA3A;
+}
+#formProcurar{
+    width: 90%;
+    display: block;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.inputs{
+    border: 1px solid #0C1A21;
+    border-radius: 12px;
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  #funcao{
+    font-size: 18px;
+  }
+  .flex1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  .btnsPesquisa{
+    display: block;
+    margin: auto;
+    width: 90%;
+    border: 1px solid transparent;
+    border-radius:20px ;
+    margin-bottom: 2em;
+    color: #0C1A21;
+  }
+  #filtrar:enabled{
+    background-color: #F7CA3A;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  #filtrar:enabled:hover{
+    background-color: #0C1A21;
+    color: #F7CA3A;
+  }
+  #limpar{
+    background-color: #0C1A21;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  #limpar:hover{
+    background-color: #F7CA3A;
+    color: #0C1A21;
+  }
+  .linkNovoUser{
+    text-decoration: none;
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-bottom: 1em;
+    margin-top: 2em;
+  }
+  .btnNovoUser{
+    width: 100%;
+    display: block;
+    margin: auto;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: #F7CA3A;
+    color: #0C1A21;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .btnNovoUser:hover{
+    background-color: #0C1A21;
+    color: #F7CA3A;
+  }
+  #utilizadoresPadrao{
+    position: relative;
+  }
+  .background1{
+    background-color: #0C1A21;
+    width: 80%;
+    display: block;
+    margin: auto;
+    height: 50em;
+    margin-bottom: 3em;
+    position: relative;
+    padding: 1em;
+  }
+  .background2{
+    position: relative;
+    background-color: #0C1A21;
+    margin-bottom: 1em;
+    color: #FFFFFF;
+    border-radius: 12px;
+    padding: 1em;
+    height: 12em;
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-bottom: 1em;
+  }
+  .idUser{
+    position: absolute;
+    top: 0;
+    left: 2%;
+  }
+  .infoUser{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .editarUser{
+    position: absolute;
+    left: 2%;
+    bottom: 5%;
+  }
+  .removerUser{
+    position: absolute;
+    right: 1%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .btns{
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 12px;
+    cursor: pointer;
+  }
+  .btns p{
+    margin: 0;
+  }
+  #btnRmover{
+    background-color: transparent;
+    color: red;
+    height: 12em;
+    transition: background-color 0.3s;
+  }
+  #btnRmover:hover{
+    background-color: red;
+    color: #FFFFFF;
+  }
+  #btnRmover p{
+    font-size: 2em;
+  }
+  #btnEditar{
+    background-color: #FFFFFF;
+    color: #0C1A21;
+    transition: background-color 0.3s;
+  }
+  #btnEditar:hover{
+    background-color: transparent;
+    color: #F7CA3A;
+  }
+  #btnEditar i{
+    font-size: 2em;
+  }
+  .semResultados{
+    text-align: center;
+    background-color: #0C1A21;
+    color: #FFFFFF;
+    width: 50%;
+    padding: 0.5em;
+    display: block;
+    margin: auto;
+    margin-bottom: 3em;
+    border-radius: 12px;
+  }
