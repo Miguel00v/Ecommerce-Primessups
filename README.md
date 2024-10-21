@@ -1,88 +1,89 @@
-Loja Online - PrimeSupps
-Briefing
-Introdução
-Este projeto final consiste na criação de uma loja virtual focada em produtos de suplementação. A escolha desse tema reflete a minha valorização pessoal pela saúde e vitalidade. Na fase de planejamento, utilizei a metodologia de Design Thinking para garantir uma abordagem centrada no usuário e inovadora. O desenvolvimento foi feito utilizando HTML, CSS, JavaScript e PHP, com o auxílio de frameworks e bibliotecas para otimizar o processo e garantir uma experiência de usuário de alta qualidade.
+Online Store - PrimeSupps Briefing
 
-Empatia / Público-Alvo
-A loja virtual é direcionada para um público interessado em saúde e bem-estar, com foco especial em suplementação. Para definir a persona, foram realizadas pesquisas em diversos websites de suplementação (como Prozis, Zumub e MyProtein), comparando navegação, design, funcionalidades e as percepções dos usuários.
+Introduction
+This final project consists of creating an online store focused on supplementation products. The choice of this theme reflects my personal appreciation for health and vitality. During the planning phase, I used the Design Thinking methodology to ensure a user-centered and innovative approach. The development was done using HTML, CSS, JavaScript, and PHP, with the help of frameworks and libraries to optimize the process and ensure a high-quality user experience.
+
+Empathy / Target Audience
+The online store is aimed at an audience interested in health and wellness, with a special focus on supplementation. To define the persona, research was conducted on several supplementation websites (such as Prozis, Zumub, and MyProtein), comparing navigation, design, functionalities, and user perceptions.
 
 Persona:
-Nome: Pedro Silva
-Idade: 30 anos
-Gênero: Masculino
-Ocupação: Profissional de marketing e entusiasta de fitness
-Interesses: Fitness, musculação, desporto ao ar livre, suplementação e dieta rigorosa.
-Necessidades e Desejos:
-Busca por produtos de alta qualidade.
-Deseja informações detalhadas e confiáveis sobre produtos.
-Prefere uma experiência de compra rápida, fácil e intuitiva com um design moderno.
-Definição do Problema / Objetivo do Website
-Com base na pesquisa da fase de empatia, o principal objetivo do website é vender suplementos alimentares de maneira rápida e eficiente, oferecendo uma experiência de usuário intuitiva e responsiva.
+Name: Pedro Silva
+Age: 30 years old
+Gender: Male
+Occupation: Marketing professional and fitness enthusiast
+Interests: Fitness, bodybuilding, outdoor sports, supplementation, and a strict diet.
+Needs and Desires: Seeks high-quality products. Wants detailed and reliable information about products. Prefers a fast, easy, and intuitive shopping experience with a modern design.
 
-Mapa do Site
-O mapa do site foi elaborado utilizando técnicas de brainstorming e treehouse para organizar e estruturar as páginas e suas funcionalidades. O mapa está disponível no arquivo PDF na pasta de briefing com o nome mapaSite.pdf.
+Problem Definition / Website Objective
+Based on the research from the empathy phase, the main objective of the website is to sell dietary supplements quickly and efficiently, providing an intuitive and responsive user experience.
 
-Conteúdo
-Identidade Visual
-O nome "PrimeSupps" foi escolhido para refletir exclusividade e qualidade no nicho de suplementos. O logotipo foi desenhado com cores vivas e uma tipografia moderna, transmitindo vitalidade, saúde e otimismo. A identidade visual completa está disponível na pasta de conteúdo identidadeVisual.
+Sitemap
+The sitemap was developed using brainstorming and treehouse techniques to organize and structure the pages and their functionalities. The sitemap is available in the PDF file in the briefing folder, named mapaSite.pdf.
 
-Textos e Imagens
-Todos os textos legais, como políticas de privacidade e termos de condições, foram redigidos. Imagens de banners, produtos e outros elementos visuais estão organizados na pasta de conteúdo.
+Content
+Visual Identity
+The name "PrimeSupps" was chosen to reflect exclusivity and quality in the supplement niche. The logo was designed with vibrant colors and modern typography, conveying vitality, health, and optimism. The full visual identity is available in the identidadeVisual folder.
 
-Domínio e Hospedagem
-Adquiri o domínio primesupps.pt e realizei uma simulação de compra de serviço de hospedagem na plataforma amen.pt. Os detalhes da simulação podem ser consultados na pasta de conteúdo.
+Texts and Images
+All legal texts, such as privacy policies and terms and conditions, have been written. Images for banners, products, and other visual elements are organized in the content folder.
 
-Conta Gmail
-Foi criada uma conta Gmail para gerenciar as comunicações da marca, com os seguintes dados:
+Domain and Hosting
+I purchased the domain primesupps.pt and conducted a simulated purchase of hosting services on the amen.pt platform. Details of the simulation can be found in the content folder.
+
+Gmail Account
+A Gmail account was created to manage brand communications with the following details:
 
 Email: primesupps.pt@gmail.com
-Senha: TrabalhoFinal123
-Design / Ideação
+Password: TrabalhoFinal123
+
+Design / Ideation
 Wireframes
-As wireframes foram desenvolvidas no Figma e podem ser encontradas na pasta de design, com o nome wireframes.
+The wireframes were developed in Figma and can be found in the design folder, named wireframes.
 
 Style Guide
-O Style Guide foi elaborado após as wireframes, definindo cores, tipografia, espaçamento e outros elementos visuais. Está disponível na pasta styleGuide.
+The Style Guide was created after the wireframes, defining colors, typography, spacing, and other visual elements. It is available in the styleGuide folder.
 
-Base de Dados
-Um Diagrama de Entidade Relacionamento foi criado para a base de dados utilizando o Figma. O esboço está disponível na pasta de design esbocoBaseDados.
+Database
+An Entity-Relationship Diagram was created for the database using Figma. The sketch is available in the design folder under esbocoBaseDados.
 
-Prototipagem / Desenvolvimento
-Base de Dados
-A base de dados foi implementada utilizando phpMyAdmin e scripts SQL, seguindo os seguintes passos:
+Prototyping / Development
 
-Análise do Esboço: Compreensão da estrutura e requisitos.
-Modelo de Dados: Definição de entidades como usuários, produtos e transações, e seus atributos.
-Normalização e Implementação: A normalização garantiu consistência e evitou redundâncias.
+Database
+The database was implemented using phpMyAdmin and SQL scripts, following these steps:
+
+Analysis of the Sketch: Understanding the structure and requirements.
+Data Model: Defining entities such as users, products, and transactions, and their attributes.
+Normalization and Implementation: Normalization ensured consistency and avoided redundancy.
 Back-end
-O desenvolvimento back-end foi feito em PHP para conectar páginas com a base de dados e implementar funcionalidades como:
+The back-end development was done in PHP to connect pages to the database and implement functionalities such as:
 
-Checkout com Stripe API: Pagamentos seguros, com possibilidade de salvar métodos de pagamento.
-Carrinho de Compras: Criação dinâmica e armazenamento dos itens no banco de dados.
-Sistema de Sessão: Gestão de usuários, autenticação e controle de acesso com verificação por email.
-Administração: Área de administrador com controle de usuários, produtos, encomendas e documentos legais.
+Checkout with Stripe API: Secure payments with the option to save payment methods.
+Shopping Cart: Dynamic creation and storage of items in the database.
+Session System: User management, authentication, and access control with email verification.
+Administration: Administrator area with control over users, products, orders, and legal documents.
 Front-end
-Foi utilizado HTML, CSS e JavaScript para desenvolver uma interface responsiva e amigável. Utilizei Flexbox e Grid para layouts e Font Awesome para ícones.
+HTML, CSS, and JavaScript were used to develop a responsive and user-friendly interface. I used Flexbox and Grid for layouts and Font Awesome for icons.
 
-Testes
-Testes Funcionais
-Verifiquei a navegação entre páginas, formulários e elementos de interface.
+Testing
 
-Testes de Usabilidade
-Avaliei a simplicidade e clareza da interface para o usuário.
+Functional Testing
+Navigation between pages, forms, and interface elements was verified.
 
-Testes de Compatibilidade
-Testes foram realizados nos navegadores mais comuns para garantir consistência.
+Usability Testing
+The simplicity and clarity of the user interface were evaluated.
 
-Testes de Desempenho
-Avaliei o tempo de carregamento das páginas e a resposta geral do site.
+Compatibility Testing
+Tests were carried out on the most common browsers to ensure consistency.
 
-Testes de Segurança
-Implementação básica de segurança contra vulnerabilidades comuns.
+Performance Testing
+Page load times and the overall responsiveness of the site were assessed.
 
-Conclusão
-A criação da loja virtual "PrimeSupps" foi bem-sucedida, com foco nas necessidades do usuário e melhores práticas de desenvolvimento web. A loja oferece uma experiência de compra intuitiva, segura e eficiente, validada pelos testes realizados durante o projeto.
+Security Testing
+Basic security measures were implemented to protect against common vulnerabilities.
 
-Observação: Por motivos de segurança, as credenciais fornecidas no documento são fictícias e devem ser substituídas antes de uso real.
+Conclusion
+The creation of the "PrimeSupps" online store was successful, with a focus on user needs and web development best practices. The store offers an intuitive, secure, and efficient shopping experience, validated by the tests conducted during the project.
 
-Esse README contém as informações detalhadas sobre o desenvolvimento do projeto PrimeSupps e pode ser complementado conforme a evolução da plataforma.
+Note: For security reasons, the credentials provided in this document are fictional and must be replaced before real use.
+
+This README contains detailed information about the development of the PrimeSupps project and can be updated as the platform evolves.
