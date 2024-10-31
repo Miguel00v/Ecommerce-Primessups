@@ -5,7 +5,7 @@
     include'conexaobd.php';
 
     //selecionar documento da base de dados
-    $sql = " SELECT documento FROM documentos_legais WHERE nome = 'Política de devolução' ";
+    $sql = " SELECT documento FROM documentos_legais WHERE nome = 'Devoluções e trocas' ";
     $result = mysqli_query($conn, $sql);
 
 ?>
@@ -50,14 +50,14 @@
                     echo "<div class='documento'><h1>Devoluções e trocas</h1><p>".$documento."</p></div>";
                 } else {
                     echo "<script> alert('Erro ao carregar página!'); 
-                        window.location.href='index.php';
+                        window.location.href='../index.php';
                     </script>";
                 }
 
                 mysqli_free_result($result);
             } else {
                 echo "<script> alert('Erro ao carregar página!'); 
-                        window.location.href='index.php';
+                        window.location.href='../index.php';
                     </script>";
             }
 

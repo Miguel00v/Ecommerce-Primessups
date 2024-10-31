@@ -2,7 +2,7 @@
 session_start();
 
 //Link para rederecionar para página anterior se definida, senão vai para página inicial
-$anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'index.php';
+$anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '../index.php';
 
 ?>
 

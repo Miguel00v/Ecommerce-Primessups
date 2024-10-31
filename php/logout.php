@@ -5,6 +5,6 @@
         session_destroy();
     }
     echo "<script>alert('Sessão encerrada com sucesso!');
-            window.location.href='index.php';</script>";
+            window.location.href='../index.php';</script>";
   
 ?>

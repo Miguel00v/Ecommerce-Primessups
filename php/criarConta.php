@@ -3,7 +3,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-$anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'index.php';
+$anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '../index.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include 'conexaobd.php';
@@ -154,7 +154,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <h1>Criar conta</h1>
                     </div>
                     </div>
-                <div id="XHeader"><a href="index.php" title="Ir para página principal"><i class="fa-solid fa-x"></i></a></div>
+                <div id="XHeader"><a href="../index.php" title="Ir para página principal"><i class="fa-solid fa-x"></i></a></div>
                 </div>
             </div>
         </nav>

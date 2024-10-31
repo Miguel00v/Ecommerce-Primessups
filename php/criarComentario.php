@@ -60,7 +60,7 @@
                     if (mysqli_stmt_affected_rows($stmtComentario) > 0) {
     
                         echo "<script>alert('Comentário inserido com sucesso'); 
-                        window.location.href='index.php';
+                        window.location.href='../index.php';
                         </script>";
     
                     } else {
@@ -99,7 +99,7 @@
     
 
     //Link para rederecionar para página anterior se definida, senão vai para página inicial
-    $anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'index.php';
+    $anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '../index.php';
 ?>
 
 <!DOCTYPE html>

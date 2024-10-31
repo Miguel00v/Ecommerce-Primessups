@@ -81,7 +81,7 @@ function formatarCodigoPostal($codigoPostal) {
 function startsWithRua($endereco) {
     return (substr($endereco, 0, 3) === "Rua");
 }
-$anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'index.php';
+$anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '../index.php';
 ?>
 
 

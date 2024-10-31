@@ -8,7 +8,7 @@
                         <h1>Carrinho</h1>
                     </div>
                     </div>
-                <div id="XHeader"><a href="index.php" title="Ir para página principal"><i class="fa-solid fa-x"></i></a></div>
+                <div id="XHeader"><a href="../index.php" title="Ir para página principal"><i class="fa-solid fa-x"></i></a></div>
                 </div>
             </div>
         </nav>

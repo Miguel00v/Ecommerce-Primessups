@@ -15,7 +15,7 @@ if(isset($_SESSION['utilizadorID'])){
     if(mysqli_stmt_fetch($stmt)<0){
 
         echo " <script> alert('Erro ao carregar página'); 
-        window.location.href='index.php';
+        window.location.href='../index.php';
     </script> ";
 
     }

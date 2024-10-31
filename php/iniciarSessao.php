@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['login'] = true; // Indica que o utilizador iniciou login
 
             
-            echo "<script>alert('Login efetuado com sucesso!'); window.location.href = 'index.php';</script>";
+            echo "<script>alert('Login efetuado com sucesso!'); window.location.href = '../index.php';</script>";
             exit;
 
         } else {
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 //Link para rederecionar para página anterior se definida, senão vai para página inicial
-$anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'index.php';
+$anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '../index.php';
 ?>
 
 <!DOCTYPE html>
@@ -89,7 +89,7 @@ $anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'ind
                         <h1>Iniciar Sessão</h1>
                     </div>
                     </div>
-                <div id="XHeader"><a href="index.php" title="Ir para página principal"><i class="fa-solid fa-x"></i></a></div>
+                <div id="XHeader"><a href="../index.php" title="Ir para página principal"><i class="fa-solid fa-x"></i></a></div>
                 </div>
             </div>
         </nav>

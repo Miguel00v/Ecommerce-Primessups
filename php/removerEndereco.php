@@ -4,7 +4,7 @@ session_start();
 // Verificar se o usuário está autenticado
 if (!isset($_SESSION['utilizadorID'])) {
     echo "<script>alert('Precisa de iniciar sessão para remover um endereço!'); 
-          window.location.href='index.php';</script>";
+          window.location.href='../index.php';</script>";
     exit; // Termina a execução do script se o utilizador não estiver autenticado
 }
 

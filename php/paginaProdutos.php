@@ -206,11 +206,11 @@ if (isset($_GET['id'])) {
 <?php
     } else {
         // Produto não encontrado
-        echo "<script>alert('Produto não encontrado'); window.location.href='index.php';</script>";
+        echo "<script>alert('Produto não encontrado'); window.location.href='../index.php';</script>";
     }
 } else {
     // Caso 'id' não tenha sido recebido via GET, exibe uma mensagem de erro ou redireciona
-    echo "<script>alert('Não foi possível carregar a página!'); window.location.href='index.php';</script>";
+    echo "<script>alert('Não foi possível carregar a página!'); window.location.href='../index.php';</script>";
 }
 
 ?>

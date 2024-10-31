@@ -4,7 +4,7 @@ session_start();
 
 // Verificar se o utilizador está autenticado
 if (!isset($_SESSION['utilizadorID'])) {
-    header('Location: index.php');
+    header('Location: ../index.php');
     exit; 
 }
 
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($success) {
         // Todas as operações foram bem-sucedidas
         echo "<script> alert('Conta removida com sucesso!');" .session_destroy()."
-        window.location.href='index.php'; </script>";
+        window.location.href='../index.php'; </script>";
     } else {
         // Alguma operação falhou
         echo "<script>alert('Erro ao remover conta!');</script>";

@@ -3,7 +3,7 @@ session_start();
 // Verificar se o usuário está autenticado
 if (!isset($_SESSION['utilizadorID'])) {
     echo "<script>alert('Precisa de iniciar sessão para abrir a página!'); 
-          window.location.href='index.php';</script>";
+          window.location.href='../index.php';</script>";
     exit; // Termina a execução do script se o utilizador não estiver autenticado
 }
 
@@ -62,7 +62,7 @@ $enderecos = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 mysqli_stmt_close($stmt); // Fechar o statement após obter o resultado
 mysqli_close($conn);
-$anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'index.php';
+$anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '../index.php';
 ?>
 
 <!DOCTYPE html>

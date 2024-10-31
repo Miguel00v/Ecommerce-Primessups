@@ -207,7 +207,7 @@ if ($stmt) {
     </main>
     <footer class="footerVazio">
         <div>
-            <a class="btnComprar" href="index.php" title="Comprar agora"><button class="btnCompra" type="button"><p>Comprar agora</p></button></a>
+            <a class="btnComprar" href="../index.php" title="Comprar agora"><button class="btnCompra" type="button"><p>Comprar agora</p></button></a>
         </div>
     </footer>
 <?php endif; ?>

@@ -2,7 +2,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-$anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'index.php';
+$anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '../index.php';
 
 session_start();
 
@@ -186,7 +186,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['codigo'], $_POST['Nova
                         <h1>Recuperar password</h1>
                     </div>
                     </div>
-                <div id="XHeader"><a href="index.php" title="Ir para página principal"><i class="fa-solid fa-x"></i></a></div>
+                <div id="XHeader"><a href="../index.php" title="Ir para página principal"><i class="fa-solid fa-x"></i></a></div>
                 </div>
             </div>
         </nav>

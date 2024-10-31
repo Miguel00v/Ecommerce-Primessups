@@ -3,7 +3,7 @@
     session_start();
 
     //Link para rederecionar para página anterior se definida, senão vai para página inicial
-    $anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'index.php';
+    $anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '../index.php';
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         include 'conexaobd.php';
@@ -58,7 +58,7 @@
                     echo "<script>alert('Erro ao enviar mensagem!');</script>";
                 } else {
                     echo "<script>alert('Mensagem enviada com sucesso!');
-                        window.location.href='index.php';
+                        window.location.href='../index.php';
                     </script>";
                 }
     
@@ -79,7 +79,7 @@
                     echo "<script>alert('Erro ao enviar mensagem!');</script>";
                 } else {
                     echo "<script>alert('Mensagem enviada com sucesso!');
-                        window.location.href='index.php';
+                        window.location.href='../index.php';
                     </script>";
                 }
     

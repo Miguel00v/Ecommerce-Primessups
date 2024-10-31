@@ -2,7 +2,7 @@
 session_start();
 
 // Redireciona para a página anterior, se disponível, ou para a página inicial
-$anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'index.php';
+$anteriorURL = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '../index.php';
 
 // Verifica se o usuário está autenticado
 if (!isset($_SESSION['utilizadorID'])) {

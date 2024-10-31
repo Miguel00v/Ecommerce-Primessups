@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Verificar se o email é válido
     if (!isValidEmail($email)) {
-        echo "<script>alert('Endereço de email inválido'); window.location.href='index.php';</script>";
+        echo "<script>alert('Endereço de email inválido'); window.location.href='../index.php';</script>";
         exit();
     }
     
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                         if ($rowNews['receberNewsletter'] == 1) {
                             // Newsletter já está ativa
-                            echo "<script>alert('Newsletter já está ativa'); window.location.href='index.php';</script>";
+                            echo "<script>alert('Newsletter já está ativa'); window.location.href='../index.php';</script>";
                         } else {
                             // Newsletter não está ativa, ativar agora
                             $sqlUpdate = "UPDATE permissoes SET receberNewsletter = 1 WHERE utilizadorID = ?";
@@ -61,21 +61,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 mysqli_stmt_execute($stmtUpdate);
 
                                 if (mysqli_stmt_affected_rows($stmtUpdate) > 0) {
-                                    echo "<script>alert('Newsletter ativada com sucesso'); window.location.href='index.php';</script>";
+                                    echo "<script>alert('Newsletter ativada com sucesso'); window.location.href='../index.php';</script>";
                                 } else {
-                                    echo "<script>alert('Erro ao ativar newsletter'); window.location.href='index.php';</script>";
+                                    echo "<script>alert('Erro ao ativar newsletter'); window.location.href='../index.php';</script>";
                                 }
                                 mysqli_stmt_close($stmtUpdate);
                             } else {
-                                echo "<script>alert('Erro ao preparar a atualização da newsletter'); window.location.href='index.php';</script>";
+                                echo "<script>alert('Erro ao preparar a atualização da newsletter'); window.location.href='../index.php';</script>";
                             }
                         }
                         mysqli_stmt_close($stmtNews);
                     } else {
-                        echo "<script>alert('Erro ao executar a consulta de permissões de newsletter'); window.location.href='index.php';</script>";
+                        echo "<script>alert('Erro ao executar a consulta de permissões de newsletter'); window.location.href='../index.php';</script>";
                     }
                 } else {
-                    echo "<script>alert('Erro ao preparar a verificação da newsletter'); window.location.href='index.php';</script>";
+                    echo "<script>alert('Erro ao preparar a verificação da newsletter'); window.location.href='../index.php';</script>";
                 }
             } else {
                 // Utilizador não existe, verificar se o email já está na tabela de permissões
@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                             if ($row1['receberNewsletter'] == 1) {
                                 // Newsletter já está ativa para o email
-                                echo "<script>alert('Newsletter já está ativa para o email fornecido'); window.location.href='index.php';</script>";
+                                echo "<script>alert('Newsletter já está ativa para o email fornecido'); window.location.href='../index.php';</script>";
                             } else {
                                 // Newsletter não está ativa para o email, ativar agora
                                 $sqlInsert = "UPDATE permissoes SET receberNewsletter = 1 WHERE email = ?";
@@ -106,13 +106,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     mysqli_stmt_execute($stmtInsert);
 
                                     if (mysqli_stmt_affected_rows($stmtInsert) > 0) {
-                                        echo "<script>alert('Newsletter ativada com sucesso'); window.location.href='index.php';</script>";
+                                        echo "<script>alert('Newsletter ativada com sucesso'); window.location.href='../index.php';</script>";
                                     } else {
-                                        echo "<script>alert('Erro ao ativar newsletter'); window.location.href='index.php';</script>";
+                                        echo "<script>alert('Erro ao ativar newsletter'); window.location.href='../index.php';</script>";
                                     }
                                     mysqli_stmt_close($stmtInsert);
                                 } else {
-                                    echo "<script>alert('Erro ao preparar a atualização da newsletter'); window.location.href='index.php';</script>";
+                                    echo "<script>alert('Erro ao preparar a atualização da newsletter'); window.location.href='../index.php';</script>";
                                 }
                             }
                         } else {
@@ -125,29 +125,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 mysqli_stmt_execute($stmtInsert);
 
                                 if (mysqli_stmt_affected_rows($stmtInsert) > 0) {
-                                    echo "<script>alert('Newsletter ativada com sucesso'); window.location.href='index.php';</script>";
+                                    echo "<script>alert('Newsletter ativada com sucesso'); window.location.href='../index.php';</script>";
                                 } else {
-                                    echo "<script>alert('Erro ao ativar newsletter'); window.location.href='index.php';</script>";
+                                    echo "<script>alert('Erro ao ativar newsletter'); window.location.href='../index.php';</script>";
                                 }
                                 mysqli_stmt_close($stmtInsert);
                             } else {
-                                echo "<script>alert('Erro ao preparar a inserção da newsletter'); window.location.href='index.php';</script>";
+                                echo "<script>alert('Erro ao preparar a inserção da newsletter'); window.location.href='../index.php';</script>";
                             }
                         }
                         mysqli_stmt_close($stmt1);
                     } else {
-                        echo "<script>alert('Erro ao executar a consulta de permissões de newsletter'); window.location.href='index.php';</script>";
+                        echo "<script>alert('Erro ao executar a consulta de permissões de newsletter'); window.location.href='../index.php';</script>";
                     }
                 } else {
-                    echo "<script>alert('Erro ao preparar a verificação da newsletter'); window.location.href='index.php';</script>";
+                    echo "<script>alert('Erro ao preparar a verificação da newsletter'); window.location.href='../index.php';</script>";
                 }
             }
         } else {
-            echo "<script>alert('Erro ao executar a consulta de verificação do usuário'); window.location.href='index.php';</script>";
+            echo "<script>alert('Erro ao executar a consulta de verificação do usuário'); window.location.href='../index.php';</script>";
         }
         mysqli_stmt_close($stmt);
     } else {
-        echo "<script>alert('Erro ao preparar a consulta de verificação do usuário'); window.location.href='index.php';</script>";
+        echo "<script>alert('Erro ao preparar a consulta de verificação do usuário'); window.location.href='../index.php';</script>";
     }
 
     mysqli_close($conn);

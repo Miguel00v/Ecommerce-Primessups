@@ -50,14 +50,14 @@
                             echo "<div class='documento'><h1>Política de Privacidade</h1><p>".$documento."</p></div>";
                         } else {
                             echo "<script> alert('Erro ao carregar página!'); 
-                                window.location.href='index.php';
+                                window.location.href='../index.php';
                             </script>";
                         }
 
                         mysqli_free_result($result);
                     } else {
                         echo "<script> alert('Erro ao carregar página!'); 
-                                window.location.href='index.php';
+                                window.location.href='../index.php';
                             </script>";
                     }
 
