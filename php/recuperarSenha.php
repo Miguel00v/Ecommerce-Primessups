@@ -12,13 +12,13 @@ function gerarCodigo($tamanho = 4) {
 }
 
 // Verificar se o e-mail inserido existe
-if (isset($_POST['email'])) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email'])) {
     include 'conexaobd.php';
     
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo json_encode(['status' => 'error', 'message' => 'Email inválido.']);
+        echo "<script>alert('Email inválido.');</script>";
         exit();
     }
     
@@ -64,97 +64,22 @@ if (isset($_POST['email'])) {
                 $mail->Body = 'Segue o seguinte código para recuperar a sua password <b>'.$codigoRecuperacao.'</b>.<br> Se não solicitou nenhum pedido de recuperação, por favor entre em contato connosco.';
 
                 $mail->send();
-                echo json_encode(['status' => 'success', 'message' => 'Foi enviado um e-mail com o código de recuperação para que você possa recuperar a sua senha.']);
+                echo "<script> alert ('Foi enviado um e-mail com o código de recuperação para que você possa recuperar a sua senha.');
+                    window.location.href ='alterarSenha_recuperada.php';</script>";
             } catch (Exception $e) {
-                echo json_encode(['status' => 'error', 'message' => 'Erro ao enviar código de recuperação: ' . $mail->ErrorInfo]);
+                echo "<script> alert('Erro ao enviar código de recuperação');</script>";
             }
         } else {
-            echo json_encode(['status' => 'error', 'message' => 'E-mail inserido não existe na nossa base de dados.']);
+            echo "<script> alert('E-mail inserido não existe na nossa base de dados.';</script>";
         }
     
         mysqli_stmt_close($stmt);
     } else {
-        echo json_encode(['status' => 'error', 'message' => 'Erro na preparação da consulta']);
+        echo "<script> alert('Erro na preparação do email.');</script>";
     }
     
     mysqli_close($conn);
     exit(); 
-}
-
-// Alterar senha
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['codigo'], $_POST['NovaPassword'], $_POST['ConfirmNovaPassword'])) {
-    $codigo = trim($_POST['codigo']);
-    $password = trim($_POST['NovaPassword']);
-    $confirmPassword = trim($_POST['ConfirmNovaPassword']);
-
-    if (empty($codigo) || empty($password) || empty($confirmPassword)) {
-        echo "<script>
-            alert('Todos os campos são obrigatórios.');
-            window.location.href = 'recuperarSenha.php';
-        </script>";
-        exit();
-    }
-
-    if ($codigo === $_SESSION['codigo_recuperacao']) {
-        if ($password === $confirmPassword) {
-            $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-
-            include 'conexaobd.php';
-
-            $sqlUpdate = "UPDATE utilizadores SET senha = ? WHERE utilizadorID = ?";
-            $stmtUpdate = mysqli_prepare($conn, $sqlUpdate);
-
-            if ($stmtUpdate) {
-                mysqli_stmt_bind_param($stmtUpdate, "si", $hashedPassword, $_SESSION['utilizadorID']);
-                if (mysqli_stmt_execute($stmtUpdate)) {
-                    date_default_timezone_set('Europe/Lisbon');
-                    $data = date('Y-m-d H:i:s');
-                    $sqlInsert = "INSERT INTO alteracoes_password (data, utilizadorID) VALUES (?, ?)";
-                    $stmtInsert = mysqli_prepare($conn, $sqlInsert);
-                    mysqli_stmt_bind_param($stmtInsert, 'si', $data, $_SESSION['utilizadorID']);
-                    mysqli_stmt_execute($stmtInsert);
-
-                    mysqli_stmt_close($stmtInsert);
-                    mysqli_stmt_close($stmtUpdate);
-
-                    // Limpar a sessão e redirecionar
-                    session_destroy();
-                    echo "<script>
-                        alert('Password alterada com sucesso!');
-                        window.location.href = 'iniciarSessao.php';
-                    </script>";
-                } else {
-                    // Mensagem de erro e redirecionamento
-                    session_destroy();
-                    echo "<script>
-                        alert('Erro ao atualizar senha.');
-                        window.location.href = 'recuperarSenha.php';
-                    </script>";
-                }
-            } else {
-                session_destroy();
-                echo "<script>
-                    alert('Erro ao preparar a atualização da senha.');
-                    window.location.href = 'recuperarSenha.php';
-                </script>";
-            }
-
-            mysqli_close($conn);
-        } else {
-            session_destroy();
-            echo "<script>
-                alert('As senhas inseridas não coincidem.');
-                window.location.href = 'recuperarSenha.php';
-            </script>";
-        }
-    } else {
-        session_destroy();
-        echo "<script>
-            alert('Código inserido não é válido.');
-            window.location.href = 'recuperarSenha.php';
-        </script>";
-    }
-    exit();
 }
 ?>
 
@@ -196,27 +121,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['codigo'], $_POST['Nova
 
         <form id="formRecuperarSenha" method="post">
         <div class="input-container">
-            <input id="codigo" type="password" name="codigo" value="" placeholder="Código" aria-label="codigo" maxlength="4" required>
-            <i class="fa fa-eye-slash" id="toggleCodigo" aria-hidden="true" onclick="toggleVisibility('codigo', 'toggleCodigo')"></i>
+            <input id="EMAIL" type="text" name="email" value="" placeholder="Email" aria-label="Email" required>
             <span class="error-message" id="codigoError"></span>
         </div>
-        <div class="input-container">
-            <input id="password" type="password" name="NovaPassword" placeholder="Nova password" aria-label="Nova password" required>
-            <i class="fa fa-eye-slash" id="togglePassword" aria-hidden="true" onclick="toggleVisibility('password', 'togglePassword')"></i>
-            <span class="error-message" id="passwordError"></span>
-        </div>
-        <div class="input-container">
-            <input id="confirmPassword" type="password" name="ConfirmNovaPassword" placeholder="Confirmar password" aria-label="Confirmar nova password" required>
-            <i class="fa fa-eye-slash" id="toggleConfirmPassword" aria-hidden="true" onclick="toggleVisibility('confirmPassword', 'toggleConfirmPassword')"></i>
-            <span class="error-message" id="confirmPasswordError"></span>
-        </div>
-        <button id="btnAlterar" type="submit" disabled><p>Alterar</p></button>
+        <button id="btnAlterar" type="submit"><p>Alterar</p></button>
     </form>
-        <button id="reenviarCodigo" type="button" onclick="ReenviarCodigo()"><p>Reenviar código</p></button>
-
     </main>
 
     <footer></footer>
-    <script type="text/javascript" src="../js/recuperarSenha.js"></script>
 </body>
 </html>

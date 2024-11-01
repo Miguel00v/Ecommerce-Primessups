@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             'currency' => 'eur',
             'payment_method' => $metodoID,
             'confirm' => true,
-            'return_url' => 'http://localhost/Trabalho%20final/Desenvolvimento/php/pagamentoConfirmado.php'
+            'return_url' => 'http://primesupps.free.nf/php/pagamentoConfirmado.php'
         ]);
 
         $carrinhoID = urlencode($carrinhoID);

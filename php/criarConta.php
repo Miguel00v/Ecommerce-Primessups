@@ -24,12 +24,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Validate inputs
     if (empty($nome) || empty($apelido) || empty($dataNascimento) || empty($email) || empty($password) || empty($confirmPassword)) {
-        echo '<script>alert("Todos os campos são obrigatórios"); window.location.href="registro.php";</script>';
+        echo '<script>alert("Todos os campos são obrigatórios"); window.location.href="criarConta.php";</script>';
         exit;
     }
 
     if ($password !== $confirmPassword) {
-        echo '<script>alert("As senhas não coincidem"); window.location.href="registro.php";</script>';
+        echo '<script>alert("As senhas não coincidem"); window.location.href="criarConta.php";</script>';
         exit;
     }
 
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
-        echo '<script>alert("Este email já está em uso"); window.location.href="registro.php";</script>';
+        echo '<script>alert("Este email já está em uso"); window.location.href="iniciarSessao.php";</script>';
         $stmt->close();
         $conn->close();
         exit;
@@ -102,8 +102,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail->isHTML(true);
             $mail->CharSet = 'UTF-8'; // Define a codificação de caracteres para UTF-8
             $mail->Subject = 'Verificação de email';
-            $mail->Body = 'Clique no link para verificar seu e-mail: <a href="http://localhost/Trabalho%20final/Desenvolvimento/php/verificacaoEmail.php?token=' .  urlencode($token) . '">Verificar E-mail</a>';
-            $mail->AltBody = 'Clique no link para verificar seu e-mail: http://localhost/Trabalho%20final/Desenvolvimento/php/verificacaoEmail.php?token=' .  urlencode($token);
+            $mail->Body = 'Clique no link para verificar seu e-mail: <a href="http://primesupps.free.nf/php/verificacaoEmail.php?token=' .  urlencode($token) . '">Verificar E-mail</a>';
+            $mail->AltBody = 'Clique no link para verificar seu e-mail: http://primesupps.free.nf/php/verificacaoEmail.php?token=' .  urlencode($token);
 
             if ($mail->send()) {
                 echo '<script>alert("Registo efetuado com sucesso. Por favor confirme o email, através do link que lhe foi enviado para o email!"); window.location.href="iniciarSessao.php";</script>';

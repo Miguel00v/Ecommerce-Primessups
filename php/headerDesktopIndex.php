@@ -17,7 +17,7 @@ if(isset($_SESSION['utilizadorID'])){
         $row = mysqli_fetch_assoc($result);
 
         if ($row) {
-            $imagem = str_replace('../', '', $row['imagem']);
+            $imagem = $row['imagem'];
         } 
 
         mysqli_stmt_close($stmt);
@@ -207,4 +207,4 @@ if(isset($_SESSION['utilizadorID'])){
             </div>
     </nav>
 </header>
-<script type="text/javascript" src="js/header.js"></script>
+<script type="text/javascript" src="js/headerIndex.js"></script>
