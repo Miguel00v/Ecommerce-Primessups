@@ -1,7 +1,25 @@
 Online Store - PrimeSupps Briefing
 
 Introduction
-This final project consists of creating an online store focused on supplementation products. The choice of this theme reflects my personal appreciation for health and vitality. During the planning phase, I used the Design Thinking methodology to ensure a user-centered and innovative approach. The development was done using HTML, CSS, JavaScript, and PHP, with the help of frameworks and libraries to optimize the process and ensure a high-quality user experience.
+The PrimeSupps project is an online store dedicated to selling supplementation products. This theme was chosen based on my personal appreciation for health and vitality. I employed the Design Thinking methodology during the planning phase to ensure a user-centered and innovative approach. The development utilized HTML, CSS, JavaScript, and PHP, along with various frameworks and libraries to optimize the process and ensure a high-quality user experience.
+
+Technologies Used
+Frontend:
+
+HTML
+CSS (Flexbox and Grid layouts)
+JavaScript
+Font Awesome (for icons)
+Backend:
+
+PHP
+MySQL (via phpMyAdmin)
+API Integration:
+
+Stripe API (for secure payments)
+Design Tools:
+
+Figma (for wireframes and visual identity)
 
 Empathy / Target Audience
 The online store is aimed at an audience interested in health and wellness, with a special focus on supplementation. To define the persona, research was conducted on several supplementation websites (such as Prozis, Zumub, and MyProtein), comparing navigation, design, functionalities, and user perceptions.
@@ -31,10 +49,7 @@ Domain and Hosting
 I purchased the domain primesupps.pt and conducted a simulated purchase of hosting services on the amen.pt platform. Details of the simulation can be found in the content folder.
 
 Gmail Account
-A Gmail account was created to manage brand communications with the following details:
-
-Email: primesupps.pt@gmail.com
-Password: TrabalhoFinal123
+A Gmail account was created to manage brand communications.
 
 Design / Ideation
 Wireframes
