@@ -2,7 +2,9 @@
 
     session_start();
 
-    include'../Desenvolvimento/php/conexaobd.php';
+    header('Content-Type: text/html; charset=utf-8');
+
+    include'../htdocs/php/conexaobd.php';
 
     $sql = "SELECT ip.caminho, p.preco, p.nome, p.produtoID FROM produtos p JOIN imagens_produtos ip ON p.produtoID = ip.produtoID WHERE 
     p.destaque = '1'AND ip.imagemID = ( SELECT MIN(ip2.imagemID) FROM imagens_produtos ip2 WHERE ip2.produtoID = p.produtoID);";
@@ -38,7 +40,7 @@
     <link rel="stylesheet" href="css/footerMobile.css">
     <link rel="stylesheet" href="css/headerDesktop.css">
     <link rel="stylesheet" href="css/footerDesktop.css">
-    <script type="text/javascript" src="../js/atualizarIconeNumeroCarrinho.js"></script>
+    <script type="text/javascript" src="js/atualizarIconeNumeroCarrinhoIndex.js"></script>
     <script type="text/javascript" src="js/headerDesktop.js"></script>
     <script src="https://kit.fontawesome.com/c3bcd53a96.js" crossorigin="anonymous"></script>
     <!-- Inserir em todas as páginas -->

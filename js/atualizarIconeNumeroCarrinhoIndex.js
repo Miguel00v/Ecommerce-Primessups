@@ -1,6 +1,6 @@
 function updateCartCount() {
     $.ajax({
-        url: 'cartCount.php',
+        url: 'php/cartCount.php',
         method: 'GET',
         dataType: 'json',
         success: function(response) {
